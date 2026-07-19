@@ -1,295 +1,190 @@
-<!DOCTYPE html><html class="dark" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>MediaByCherni</title>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-tertiary-container": "#f5f7ff",
-                    "primary-fixed": "#ffdad4",
-                    "on-secondary": "#313030",
-                    "surface-container-highest": "#343535",
-                    "secondary": "#c8c6c5",
-                    "on-secondary-container": "#b7b4b4",
-                    "on-surface-variant": "#e6bdb7",
-                    "surface-container-low": "#1a1c1c",
-                    "on-error": "#690005",
-                    "surface-container-lowest": "#0d0e0f",
-                    "on-background": "#e3e2e2",
-                    "outline": "#ac8883",
-                    "secondary-fixed": "#e5e2e1",
-                    "inverse-on-surface": "#2f3131",
-                    "surface-variant": "#343535",
-                    "on-tertiary": "#00325a",
-                    "surface-tint": "#ffb4a8",
-                    "on-primary-fixed-variant": "#930001",
-                    "inverse-primary": "#be0f09",
-                    "ink-white": "#FFFFFF",
-                    "on-error-container": "#ffdad6",
-                    "tertiary-container": "#0074c8",
-                    "on-secondary-fixed-variant": "#474746",
-                    "hairline": "#303030",
-                    "error": "#ffb4ab",
-                    "on-tertiary-fixed": "#001c37",
-                    "error-container": "#93000a",
-                    "rosso-corsa": "#DA291C",
-                    "primary-container": "#da291c",
-                    "canvas-elevated": "#303030",
-                    "primary": "#ffb4a8",
-                    "tertiary-fixed": "#d2e4ff",
-                    "canvas": "#181818",
-                    "on-primary-container": "#fff5f3",
-                    "tertiary": "#a1c9ff",
-                    "surface": "#121414",
-                    "secondary-fixed-dim": "#c8c6c5",
-                    "tertiary-fixed-dim": "#a1c9ff",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "background": "#121414",
-                    "outline-variant": "#5c403b",
-                    "on-tertiary-fixed-variant": "#004880",
-                    "surface-container-high": "#292a2a",
-                    "inverse-surface": "#e3e2e2",
-                    "secondary-container": "#474746",
-                    "surface-dim": "#121414",
-                    "primary-fixed-dim": "#ffb4a8",
-                    "on-surface": "#e3e2e2",
-                    "surface-bright": "#383939",
-                    "surface-container": "#1f2020",
-                    "rosso-active": "#B01E0A",
-                    "on-primary-fixed": "#410000",
-                    "on-primary": "#690000"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "md": "2rem",
-                    "super": "8rem",
-                    "xxs": "0.5rem",
-                    "xxl": "6rem",
-                    "xs": "1rem",
-                    "xl": "4rem",
-                    "max-content-width": "1280px",
-                    "lg": "3rem",
-                    "sm": "1.5rem"
-            },
-            "fontFamily": {
-                    "button-label": ["Hanken Grotesk"],
-                    "caption-upper": ["Hanken Grotesk"],
-                    "display-mega-mobile": ["Hanken Grotesk"],
-                    "display-lg": ["Hanken Grotesk"],
-                    "display-mega": ["Hanken Grotesk"],
-                    "body-md": ["Hanken Grotesk"],
-                    "title-md": ["Hanken Grotesk"],
-                    "nav-link": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                    "button-label": ["14px", {"lineHeight": "1.0", "letterSpacing": "1.4px", "fontWeight": "700"}],
-                    "caption-upper": ["11px", {"lineHeight": "1.4", "letterSpacing": "1.1px", "fontWeight": "600"}],
-                    "display-mega-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.5px", "fontWeight": "500"}],
-                    "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.36px", "fontWeight": "500"}],
-                    "display-mega": ["80px", {"lineHeight": "1.05", "letterSpacing": "-1.6px", "fontWeight": "500"}],
-                    "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
-                    "title-md": ["18px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700"}],
-                    "nav-link": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.65px", "fontWeight": "600"}]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media By Cherni | Cinematic Automotive Photography</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida/AP1WRLtYkiBWQvF6EJFpM8MaqWKqLXl3SBAILbjuyht0hnL_6oj4gylEdk9LnqcZZgn8wEJKDOIr5MPco2P7hPKEgq03Pz9R3pX9PpB32yapeluEnR0sGQumDhcnMxRRa7gjwRf2G8WUMbsjQsDizMwJtrD3beLWMXgC5mgU8_z18fcKMwLDN53tHs3wNiQpJ5ggpgmNNd6YUHNR3vWX9bDCi07TwU8I_-3chg8G4U2Au8K8fdrT3Fre4XtZqiY">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'canvas': '#181818',
+                        'rosso-corsa': '#da291c',
+                        'ink': '#ffffff',
+                        'body': '#969696',
+                        'hairline': '#303030',
+                    },
+                    fontFamily: {
+                        'sans': ['Hanken Grotesk', 'sans-serif'],
+                    },
+                    spacing: {
+                        'xxxs': '4px',
+                        'xxs': '8px',
+                        'xs': '16px',
+                        'sm': '24px',
+                        'md': '32px',
+                        'lg': '48px',
+                        'xl': '64px',
+                        'xxl': '96px',
+                        'super': '128px',
+                    }
+                }
             }
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         body {
             background-color: #181818;
-            color: #e3e2e2;
+            color: #ffffff;
             -webkit-font-smoothing: antialiased;
         }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .reveal-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal-up.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .image-zoom-container {
-            overflow: hidden;
-        }
-        .image-zoom-container img {
-            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .image-zoom-container:hover img {
-            transform: scale(1.05);
+        .tracking-widest-plus {
+            letter-spacing: 0.15em;
         }
     </style>
-<link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida-public/AB6AXuD3wCYSA_XzmC5N51NLXZzejdIywvrlfTByO01SaRJRd3CJF4imdr1cYVqqhtOlTcU1H4aXMgPglgymK5JwfcYnm2JewALJZ_4Mj_XmMN7HwpNaPOxlnNNpxBVfhXfWOUssR7ZFPV7OOXPbiWs2fwQhkchjvW7GsMu0RFTKao7_O9SvkeOdCl101ffhUuluZ2BTcPKw4KzY0JV8JQ6w6aJ-iskq5Sgke1h4K-2q6njmaZk_FHUYb10bvUuHlCqJMBfPNA"></head>
-<body class="font-body-md overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full h-auto py-md z-50 bg-canvas/90 dark:bg-canvas/90 backdrop-blur-md border-b border-hairline">
-<div class="flex items-center justify-between px-md max-w-max-content-width mx-auto h-full"><div class="flex flex-col items-center w-full gap-sm">
-<!-- Tier 1: Logo -->
-<div class="flex justify-center">
-<img alt="MBC Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbBXaMnZeLm3h6B82oG0eJkX4sGoQCuE9upOCmbv9kOA5dO0Zt7kDeDjAT0K3Qtq67E2DAJG8gCJjmaziDwZE_y7tXuozFjYvBKhdWnrip2_uFZFc9NBOTlaxkstZMJg7ZxVHaUkQkwlRVsqlNVhFtpGOr6ABuiAqHoDHzIg9IH5dgcN7k3xsGFNdZj-TTdtIJp9BN-RnmC2cxFonyI2pcSupVQr7mVbrkDOq7tuFU0waA1lOMaSUYO0SMpqBunC1N_w">
-</div>
-<!-- Tier 2: Brand Name -->
-<div class="text-center">
-<span class="font-display-lg text-display-lg font-bold tracking-tighter text-on-surface uppercase">Media By Cherni</span>
-</div>
-<!-- Tier 3: Navigation & Action -->
-<div class="flex flex-wrap items-center justify-center gap-lg">
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-rosso-corsa border-b border-rosso-corsa transition-colors" href="#">PORTFOLIO</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="#">ABOUT ME</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="#">BOOKING</a>
-<button class="bg-rosso-corsa text-ink-white px-md py-xxs font-button-label text-button-label uppercase tracking-[1.4px] hover:bg-rosso-active transition-all active:scale-95 ml-md">
-            INQUIRE
-        </button>
-</div>
-</div></div>
-</nav>
-<main class="pt-[220px]">
-<!-- Hero Section -->
-<section class="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-canvas">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full opacity-60 grayscale" data-alt="A cinematic, wide-angle shot of a classic European supercar parked on a mist-covered coastal road at dawn. The lighting is low-key and dramatic, with cool blue tones and deep blacks reflecting the Media By Cherni brand aesthetic. High-contrast shadows define the car's aerodynamic curves against the moody sky, creating an authoritative and luxurious atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqfwkYHXKkD80A46gzQH0haTP1566-MiCZK9RuP3KG0khA-Y_qIVB4Hynga-CNa2PT7JCs5xNGQAbEqKVIkbKNqf9fLBuBYdO-_Tea961BfDg4tPXb6081anptgB8FUNSeBw1YZ-IuU-SUmMcOfRtF8-gXifnEx5bl7odcxi2yjfCewsPDz7ci4z6Sxdq5aFNANYQAgP02EmRoWCj9uZ2FCf0JaIrPuuzpgUfnyL-sgZhRjAaStw3p')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent"></div>
-</div>
-<div class="relative z-10 text-center px-md max-w-4xl">
-<span class="block font-caption-upper text-caption-upper text-rosso-corsa mb-xs tracking-[4px] reveal-up active">ESTABLISHED MMXXIV</span>
-<h1 class="font-display-mega text-display-mega-mobile md:text-display-mega text-on-surface mb-sm leading-none tracking-tighter reveal-up active">CINEMATIC VISION</h1>
-<p class="font-body-md text-secondary max-w-xl mx-auto reveal-up active">Capturing high-velocity precision and technical excellence through a refined automotive lens.</p>
-<div class="mt-lg flex justify-center gap-sm reveal-up active">
-<button class="bg-rosso-corsa text-ink-white px-xl py-xs font-button-label text-button-label uppercase">VIEW WORK</button>
-<button class="border border-on-surface text-on-surface px-xl py-xs font-button-label text-button-label uppercase hover:bg-on-surface hover:text-canvas transition-colors">THE STUDIO</button>
-</div>
-</div>
-<div class="absolute bottom-md left-1/2 -translate-x-1/2 flex flex-col items-center gap-xxs opacity-40">
-<span class="font-caption-upper text-caption-upper uppercase">Scroll to Explore</span>
-<span class="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
-</div>
-</section>
-<!-- Structured Grid Section (Empty Slate) -->
-<section class="bg-canvas py-xxl">
-<div class="max-w-max-content-width mx-auto px-md">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-sm">
-<div class="reveal-up active">
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">LATEST SERIES</span>
-<h2 class="font-display-lg text-display-lg text-on-surface">EDITORIAL PROJECTS</h2>
-</div>
-<div class="h-px flex-1 bg-hairline mx-lg hidden md:block reveal-up active"></div>
-<p class="font-body-md text-secondary reveal-up active">Coming soon. A collection of selected works.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-xl gap-x-md">
-<!-- Placeholder Grid Item 1 -->
-<div class="group border-t border-hairline pt-md reveal-up active">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
-<div class="absolute inset-0 flex items-center justify-center opacity-20">
-<span class="material-symbols-outlined text-6xl">photo_camera</span>
-</div>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<span class="font-caption-upper text-caption-upper text-secondary">01 / ARCHIVE</span>
-<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">PROJECT PHOENIX</h3>
-</div>
-<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
-</div>
-</div>
-<!-- Placeholder Grid Item 2 -->
-<div class="group border-t border-hairline pt-md reveal-up active" style="transition-delay: 100ms;">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
-<div class="absolute inset-0 flex items-center justify-center opacity-20">
-<span class="material-symbols-outlined text-6xl">videocam</span>
-</div>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<span class="font-caption-upper text-caption-upper text-secondary">02 / ARCHIVE</span>
-<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">NEON VELOCITY</h3>
-</div>
-<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
-</div>
-</div>
-<!-- Placeholder Grid Item 3 -->
-<div class="group border-t border-hairline pt-md reveal-up active" style="transition-delay: 200ms;">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
-<div class="absolute inset-0 flex items-center justify-center opacity-20">
-<span class="material-symbols-outlined text-6xl">speed</span>
-</div>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<span class="font-caption-upper text-caption-upper text-secondary">03 / ARCHIVE</span>
-<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">AERODYNAMICA</h3>
-</div>
-<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Featured Quote / Philosophy -->
-<section class="bg-surface py-xxl border-t border-hairline">
-<div class="max-w-max-content-width mx-auto px-md text-center">
-<div class="max-w-3xl mx-auto">
-<span class="material-symbols-outlined text-rosso-corsa text-4xl mb-md" data-weight="fill">format_quote</span>
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface italic leading-tight reveal-up active">
-                        "The intersection of speed and light requires more than just a camera; it requires a deep technical reverence for the machine."
-                    </h2>
-<div class="w-12 h-1 bg-rosso-corsa mx-auto mt-lg mb-sm reveal-up active"></div>
-<span class="font-caption-upper text-caption-upper tracking-[2px] reveal-up active">CHERNI — CREATIVE DIRECTOR</span>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-xl bg-canvas border-t border-hairline">
-<div class="flex flex-col md:flex-row justify-between items-center px-md max-w-max-content-width mx-auto gap-sm">
-<div class="flex flex-col items-center md:items-start gap-xxs">
-<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tighter">MEDIA BY CHERNI</span>
-<p class="font-caption-upper text-caption-upper text-secondary">© 2024 MEDIA BY CHERNI. ALL RIGHTS RESERVED.</p>
-</div>
-<div class="flex gap-lg">
-<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">INSTAGRAM</a>
-<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">BEHANCE</a>
-<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">VIMEO</a>
-<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">CONTACT</a>
-</div>
-</div>
-</footer>
-<script>
-        // Simple scroll reveal animation
-        const observerOptions = {
-            threshold: 0.1
-        };
+</head>
+<body class="font-sans">
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
+    <!-- Navigation / Header -->
+    <header class="py-xl flex flex-col items-center text-center space-y-md">
+        <div class="mb-xxs">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0nRinwIRBt7B_DwksBjhLCXDPEx0-GWFHsI02kUT-H8A4-u9p6fvYN--vV7IKqg3Ik5ARqCST0ktJCYzNlgZ6yROvW_OfNKyZLSAfRnEtZeItTVWVAQf-SOd8u31uAqGVpqzHWA1P1NBCGo3g4uN5UkVeeqT7UFDYQq9XCjHkTqWUiKeyoqxtdj69PnBy1tAl17JZY020MH8F9AS_0v9w_ArpeelSPDyt0wtDTjr3ivibvhRYmcJUwBdGUY97yM851Q" alt="Media By Cherni Logo" class="h-16 w-auto">
+        </div>
+        <h1 class="text-3xl font-medium uppercase tracking-[0.1em] text-ink">Media By Cherni</h1>
+        
+        <nav class="flex items-center justify-center space-x-md">
+            <a href="#portfolio" class="text-xs font-semibold uppercase tracking-widest text-rosso-corsa border-b border-rosso-corsa pb-1">Portfolio</a>
+            <a href="#about" class="text-xs font-semibold uppercase tracking-widest text-ink/70 hover:text-ink transition-colors">About Me</a>
+            <a href="#booking" class="text-xs font-semibold uppercase tracking-widest text-ink/70 hover:text-ink transition-colors">Booking</a>
+            <a href="#inquire" class="bg-rosso-corsa px-xs py-2 text-xs font-bold uppercase tracking-widest text-ink ml-xs">Inquire</a>
+        </nav>
+    </header>
 
-        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden">
+        <!-- Placeholder for Cinematic Car Photography -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center grayscale opacity-40"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-canvas/60 via-transparent to-canvas"></div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-md">
+            <span class="text-xs font-semibold text-rosso-corsa uppercase tracking-[0.3em] mb-xs">Established MMXXIV</span>
+            <h2 class="text-6xl md:text-8xl font-medium tracking-tighter mb-md">CINEMATIC VISION</h2>
+            <p class="max-w-xl text-body text-sm md:text-md mb-lg leading-relaxed">
+                Capturing high-velocity precision and technical excellence through a refined automotive lens.
+            </p>
+            <div class="flex space-x-md">
+                <a href="#work" class="bg-rosso-corsa px-xl py-3 text-xs font-bold uppercase tracking-widest transition-transform active:scale-95">View Work</a>
+                <a href="#studio" class="border border-white/20 px-xl py-3 text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition-all">The Studio</a>
+            </div>
+            
+            <div class="absolute bottom-xl flex flex-col items-center animate-bounce opacity-50">
+                <span class="text-[10px] uppercase tracking-widest mb-xxs">Scroll to Explore</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 13 5 5 5-5M7 6l5 5 5-5"/></svg>
+            </div>
+        </div>
+    </section>
 
-        // Smooth cursor or micro-interaction placeholder
-        document.addEventListener('mousemove', (e) => {
-            // High-end interaction logic could go here
-        });
-    </script>
+    <!-- Editorial Projects Grid -->
+    <section id="portfolio" class="py-xxl px-md max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-xl border-b border-hairline pb-sm">
+            <div>
+                <span class="text-[10px] font-semibold text-rosso-corsa uppercase tracking-widest">Latest Series</span>
+                <h3 class="text-4xl font-medium tracking-tight">EDITORIAL PROJECTS</h3>
+            </div>
+            <p class="text-xs text-body uppercase tracking-widest mb-1">Coming soon. A collection of selected works.</p>
+        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+            <!-- Project 01 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] bg-hairline relative overflow-hidden mb-sm">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-[10px] text-body uppercase tracking-widest">01 / Archive</span>
+                        <h4 class="text-lg font-bold uppercase tracking-tight">Project Phoenix</h4>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </div>
+            </div>
 
-</body></html>
+            <!-- Project 02 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] bg-hairline relative overflow-hidden mb-sm">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-[10px] text-body uppercase tracking-widest">02 / Archive</span>
+                        <h4 class="text-lg font-bold uppercase tracking-tight">Neon Velocity</h4>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </div>
+            </div>
+
+            <!-- Project 03 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] bg-hairline relative overflow-hidden mb-sm">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-[10px] text-body uppercase tracking-widest">03 / Archive</span>
+                        <h4 class="text-lg font-bold uppercase tracking-tight">Aerodynamica</h4>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-super bg-canvas text-center px-md border-t border-hairline">
+        <div class="max-w-3xl mx-auto">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#da291c" class="mx-auto mb-lg opacity-80">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h3c0 4-2 6-2 6" fill="currentColor"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h3c0 4-2 6-2 6" fill="currentColor"/>
+            </svg>
+            <h4 class="text-3xl md:text-5xl font-medium italic leading-tight mb-xl">
+                "The intersection of speed and light requires more than just a camera; it requires a deep technical reverence for the machine."
+            </h4>
+            <div class="w-12 h-0.5 bg-rosso-corsa mx-auto mb-md"></div>
+            <span class="text-xs uppercase tracking-[0.3em] font-semibold text-body">Cherni — Creative Director</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-xl px-md border-t border-hairline">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-lg">
+            <div>
+                <h5 class="text-2xl font-bold uppercase tracking-tight mb-xs">Media By Cherni</h5>
+                <p class="text-[10px] text-body uppercase tracking-widest">© 2024 Media By Cherni. All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-md">
+                <a href="#" class="text-[10px] font-semibold uppercase tracking-widest hover:text-rosso-corsa transition-colors">Instagram</a>
+                <a href="#" class="text-[10px] font-semibold uppercase tracking-widest hover:text-rosso-corsa transition-colors">Behance</a>
+                <a href="#" class="text-[10px] font-semibold uppercase tracking-widest hover:text-rosso-corsa transition-colors">Vimeo</a>
+                <a href="#" class="text-[10px] font-semibold uppercase tracking-widest hover:text-rosso-corsa transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
