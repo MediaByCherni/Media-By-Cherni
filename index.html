@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MEDIA BY CHERNI | Cinematic Vision</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#f5f7ff",
+                    "primary-fixed": "#ffdad4",
+                    "on-secondary": "#313030",
+                    "surface-container-highest": "#343535",
+                    "secondary": "#c8c6c5",
+                    "on-secondary-container": "#b7b4b4",
+                    "on-surface-variant": "#e6bdb7",
+                    "surface-container-low": "#1a1c1c",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0d0e0f",
+                    "on-background": "#e3e2e2",
+                    "outline": "#ac8883",
+                    "secondary-fixed": "#e5e2e1",
+                    "inverse-on-surface": "#2f3131",
+                    "surface-variant": "#343535",
+                    "on-tertiary": "#00325a",
+                    "surface-tint": "#ffb4a8",
+                    "on-primary-fixed-variant": "#930001",
+                    "inverse-primary": "#be0f09",
+                    "ink-white": "#FFFFFF",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#0074c8",
+                    "on-secondary-fixed-variant": "#474746",
+                    "hairline": "#303030",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#001c37",
+                    "error-container": "#93000a",
+                    "rosso-corsa": "#DA291C",
+                    "primary-container": "#da291c",
+                    "canvas-elevated": "#303030",
+                    "primary": "#ffb4a8",
+                    "tertiary-fixed": "#d2e4ff",
+                    "canvas": "#181818",
+                    "on-primary-container": "#fff5f3",
+                    "tertiary": "#a1c9ff",
+                    "surface": "#121414",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed-dim": "#a1c9ff",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "background": "#121414",
+                    "outline-variant": "#5c403b",
+                    "on-tertiary-fixed-variant": "#004880",
+                    "surface-container-high": "#292a2a",
+                    "inverse-surface": "#e3e2e2",
+                    "secondary-container": "#474746",
+                    "surface-dim": "#121414",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "on-surface": "#e3e2e2",
+                    "surface-bright": "#383939",
+                    "surface-container": "#1f2020",
+                    "rosso-active": "#B01E0A",
+                    "on-primary-fixed": "#410000",
+                    "on-primary": "#690000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "2rem",
+                    "super": "8rem",
+                    "xxs": "0.5rem",
+                    "xxl": "6rem",
+                    "xs": "1rem",
+                    "xl": "4rem",
+                    "max-content-width": "1280px",
+                    "lg": "3rem",
+                    "sm": "1.5rem"
+            },
+            "fontFamily": {
+                    "button-label": ["Hanken Grotesk"],
+                    "caption-upper": ["Hanken Grotesk"],
+                    "display-mega-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "display-mega": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "title-md": ["Hanken Grotesk"],
+                    "nav-link": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "button-label": ["14px", {"lineHeight": "1.0", "letterSpacing": "1.4px", "fontWeight": "700"}],
+                    "caption-upper": ["11px", {"lineHeight": "1.4", "letterSpacing": "1.1px", "fontWeight": "600"}],
+                    "display-mega-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.5px", "fontWeight": "500"}],
+                    "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.36px", "fontWeight": "500"}],
+                    "display-mega": ["80px", {"lineHeight": "1.05", "letterSpacing": "-1.6px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "title-md": ["18px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700"}],
+                    "nav-link": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.65px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #181818;
+            color: #e3e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .image-zoom-container {
+            overflow: hidden;
+        }
+        .image-zoom-container img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .image-zoom-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-auto py-md z-50 bg-canvas/90 dark:bg-canvas/90 backdrop-blur-md border-b border-hairline">
+<div class="flex items-center justify-between px-md max-w-max-content-width mx-auto h-full"><div class="flex flex-col items-center w-full gap-sm">
+<!-- Tier 1: Logo -->
+<div class="flex justify-center">
+<img alt="MBC Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbBXaMnZeLm3h6B82oG0eJkX4sGoQCuE9upOCmbv9kOA5dO0Zt7kDeDjAT0K3Qtq67E2DAJG8gCJjmaziDwZE_y7tXuozFjYvBKhdWnrip2_uFZFc9NBOTlaxkstZMJg7ZxVHaUkQkwlRVsqlNVhFtpGOr6ABuiAqHoDHzIg9IH5dgcN7k3xsGFNdZj-TTdtIJp9BN-RnmC2cxFonyI2pcSupVQr7mVbrkDOq7tuFU0waA1lOMaSUYO0SMpqBunC1N_w"/>
+</div>
+<!-- Tier 2: Brand Name -->
+<div class="text-center">
+<span class="font-display-lg text-display-lg font-bold tracking-tighter text-on-surface uppercase">MEDIA BY CHERNI</span>
+</div>
+<!-- Tier 3: Navigation & Action -->
+<div class="flex flex-wrap items-center justify-center gap-lg">
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-rosso-corsa border-b border-rosso-corsa transition-colors" href="#">PORTFOLIO</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="#">ABOUT ME</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="#">BOOKING</a>
+<button class="bg-rosso-corsa text-ink-white px-md py-xxs font-button-label text-button-label uppercase tracking-[1.4px] hover:bg-rosso-active transition-all active:scale-95 ml-md">
+            INQUIRE
+        </button>
+</div>
+</div></div>
+</nav>
+<main class="pt-[220px]">
+<!-- Hero Section -->
+<section class="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-canvas">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full opacity-60 grayscale" data-alt="A cinematic, wide-angle shot of a classic European supercar parked on a mist-covered coastal road at dawn. The lighting is low-key and dramatic, with cool blue tones and deep blacks reflecting the Media By Cherni brand aesthetic. High-contrast shadows define the car's aerodynamic curves against the moody sky, creating an authoritative and luxurious atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqfwkYHXKkD80A46gzQH0haTP1566-MiCZK9RuP3KG0khA-Y_qIVB4Hynga-CNa2PT7JCs5xNGQAbEqKVIkbKNqf9fLBuBYdO-_Tea961BfDg4tPXb6081anptgB8FUNSeBw1YZ-IuU-SUmMcOfRtF8-gXifnEx5bl7odcxi2yjfCewsPDz7ci4z6Sxdq5aFNANYQAgP02EmRoWCj9uZ2FCf0JaIrPuuzpgUfnyL-sgZhRjAaStw3p')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-md max-w-4xl">
+<span class="block font-caption-upper text-caption-upper text-rosso-corsa mb-xs tracking-[4px] reveal-up">ESTABLISHED MMXXIV</span>
+<h1 class="font-display-mega text-display-mega-mobile md:text-display-mega text-on-surface mb-sm leading-none tracking-tighter reveal-up">CINEMATIC VISION</h1>
+<p class="font-body-md text-secondary max-w-xl mx-auto reveal-up">Capturing high-velocity precision and technical excellence through a refined automotive lens.</p>
+<div class="mt-lg flex justify-center gap-sm reveal-up">
+<button class="bg-rosso-corsa text-ink-white px-xl py-xs font-button-label text-button-label uppercase">VIEW WORK</button>
+<button class="border border-on-surface text-on-surface px-xl py-xs font-button-label text-button-label uppercase hover:bg-on-surface hover:text-canvas transition-colors">THE STUDIO</button>
+</div>
+</div>
+<div class="absolute bottom-md left-1/2 -translate-x-1/2 flex flex-col items-center gap-xxs opacity-40">
+<span class="font-caption-upper text-caption-upper uppercase">Scroll to Explore</span>
+<span class="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Structured Grid Section (Empty Slate) -->
+<section class="bg-canvas py-xxl">
+<div class="max-w-max-content-width mx-auto px-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-sm">
+<div class="reveal-up">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">LATEST SERIES</span>
+<h2 class="font-display-lg text-display-lg text-on-surface">EDITORIAL PROJECTS</h2>
+</div>
+<div class="h-px flex-1 bg-hairline mx-lg hidden md:block reveal-up"></div>
+<p class="font-body-md text-secondary reveal-up">Coming soon. A collection of selected works.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-xl gap-x-md">
+<!-- Placeholder Grid Item 1 -->
+<div class="group border-t border-hairline pt-md reveal-up">
+<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
+<div class="absolute inset-0 flex items-center justify-center opacity-20">
+<span class="material-symbols-outlined text-6xl">photo_camera</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="font-caption-upper text-caption-upper text-secondary">01 / ARCHIVE</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">PROJECT PHOENIX</h3>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+</div>
+</div>
+<!-- Placeholder Grid Item 2 -->
+<div class="group border-t border-hairline pt-md reveal-up" style="transition-delay: 100ms;">
+<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
+<div class="absolute inset-0 flex items-center justify-center opacity-20">
+<span class="material-symbols-outlined text-6xl">videocam</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="font-caption-upper text-caption-upper text-secondary">02 / ARCHIVE</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">NEON VELOCITY</h3>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+</div>
+</div>
+<!-- Placeholder Grid Item 3 -->
+<div class="group border-t border-hairline pt-md reveal-up" style="transition-delay: 200ms;">
+<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
+<div class="absolute inset-0 flex items-center justify-center opacity-20">
+<span class="material-symbols-outlined text-6xl">speed</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<span class="font-caption-upper text-caption-upper text-secondary">03 / ARCHIVE</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">AERODYNAMICA</h3>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Quote / Philosophy -->
+<section class="bg-surface py-xxl border-t border-hairline">
+<div class="max-w-max-content-width mx-auto px-md text-center">
+<div class="max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-rosso-corsa text-4xl mb-md" data-weight="fill">format_quote</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface italic leading-tight reveal-up">
+                        "The intersection of speed and light requires more than just a camera; it requires a deep technical reverence for the machine."
+                    </h2>
+<div class="w-12 h-1 bg-rosso-corsa mx-auto mt-lg mb-sm reveal-up"></div>
+<span class="font-caption-upper text-caption-upper tracking-[2px] reveal-up">CHERNI — CREATIVE DIRECTOR</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl bg-canvas border-t border-hairline">
+<div class="flex flex-col md:flex-row justify-between items-center px-md max-w-max-content-width mx-auto gap-sm">
+<div class="flex flex-col items-center md:items-start gap-xxs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tighter">MEDIA BY CHERNI</span>
+<p class="font-caption-upper text-caption-upper text-secondary">© 2024 MEDIA BY CHERNI. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-lg">
+<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">INSTAGRAM</a>
+<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">BEHANCE</a>
+<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">VIMEO</a>
+<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // Smooth cursor or micro-interaction placeholder
+        document.addEventListener('mousemove', (e) => {
+            // High-end interaction logic could go here
+        });
+    </script>
+</body></html>
