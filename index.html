@@ -1,131 +1,146 @@
-<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-tertiary-container": "#f5f7ff",
-                    "primary-fixed": "#ffdad4",
-                    "on-secondary": "#313030",
-                    "surface-container-highest": "#343535",
-                    "secondary": "#c8c6c5",
-                    "on-secondary-container": "#b7b4b4",
-                    "on-surface-variant": "#e6bdb7",
-                    "surface-container-low": "#1a1c1c",
-                    "on-error": "#690005",
-                    "surface-container-lowest": "#0d0e0f",
-                    "on-background": "#e3e2e2",
-                    "outline": "#ac8883",
-                    "secondary-fixed": "#e5e2e1",
-                    "inverse-on-surface": "#2f3131",
-                    "surface-variant": "#343535",
-                    "on-tertiary": "#00325a",
-                    "surface-tint": "#ffb4a8",
-                    "on-primary-fixed-variant": "#930001",
-                    "inverse-primary": "#be0f09",
-                    "ink-white": "#FFFFFF",
-                    "on-error-container": "#ffdad6",
-                    "tertiary-container": "#0074c8",
-                    "on-secondary-fixed-variant": "#474746",
-                    "hairline": "#303030",
-                    "error": "#ffb4ab",
-                    "on-tertiary-fixed": "#001c37",
-                    "error-container": "#93000a",
-                    "rosso-corsa": "#DA291C",
-                    "primary-container": "#da291c",
-                    "canvas-elevated": "#303030",
-                    "primary": "#ffb4a8",
-                    "tertiary-fixed": "#d2e4ff",
-                    "canvas": "#181818",
-                    "on-primary-container": "#fff5f3",
-                    "tertiary": "#a1c9ff",
-                    "surface": "#121414",
-                    "secondary-fixed-dim": "#c8c6c5",
-                    "tertiary-fixed-dim": "#a1c9ff",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "background": "#121414",
-                    "outline-variant": "#5c403b",
-                    "on-tertiary-fixed-variant": "#004880",
-                    "surface-container-high": "#292a2a",
-                    "inverse-surface": "#e3e2e2",
-                    "secondary-container": "#474746",
-                    "surface-dim": "#121414",
-                    "primary-fixed-dim": "#ffb4a8",
-                    "on-surface": "#e3e2e2",
-                    "surface-bright": "#383939",
-                    "surface-container": "#1f2020",
-                    "rosso-active": "#B01E0A",
-                    "on-primary-fixed": "#410000",
-                    "on-primary": "#690000"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "md": "2rem",
-                    "super": "8rem",
-                    "xxs": "0.5rem",
-                    "xxl": "6rem",
-                    "xs": "1rem",
-                    "xl": "4rem",
-                    "max-content-width": "1280px",
-                    "lg": "3rem",
-                    "sm": "1.5rem"
-            },
-            "fontFamily": {
-                    "button-label": ["Hanken Grotesk"],
-                    "caption-upper": ["Hanken Grotesk"],
-                    "display-mega-mobile": ["Hanken Grotesk"],
-                    "display-lg": ["Hanken Grotesk"],
-                    "display-mega": ["Hanken Grotesk"],
-                    "body-md": ["Hanken Grotesk"],
-                    "title-md": ["Hanken Grotesk"],
-                    "nav-link": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                    "button-label": ["14px", {"lineHeight": "1.0", "letterSpacing": "1.4px", "fontWeight": "700"}],
-                    "caption-upper": ["11px", {"lineHeight": "1.4", "letterSpacing": "1.1px", "fontWeight": "600"}],
-                    "display-mega-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.5px", "fontWeight": "500"}],
-                    "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.36px", "fontWeight": "500"}],
-                    "display-mega": ["80px", {"lineHeight": "1.05", "letterSpacing": "-1.6px", "fontWeight": "500"}],
-                    "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
-                    "title-md": ["18px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700"}],
-                    "nav-link": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.65px", "fontWeight": "600"}]
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      try {
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-tertiary-container": "#f5f7ff",
+                "primary-fixed": "#ffdad4",
+                "on-secondary": "#313030",
+                "surface-container-highest": "#343535",
+                "secondary": "#c8c6c5",
+                "on-secondary-container": "#b7b4b4",
+                "on-surface-variant": "#e6bdb7",
+                "surface-container-low": "#1a1c1c",
+                "on-error": "#690005",
+                "surface-container-lowest": "#0d0e0f",
+                "on-background": "#e3e2e2",
+                "outline": "#ac8883",
+                "secondary-fixed": "#e5e2e1",
+                "inverse-on-surface": "#2f3131",
+                "surface-variant": "#343535",
+                "on-tertiary": "#00325a",
+                "surface-tint": "#ffb4a8",
+                "on-primary-fixed-variant": "#930001",
+                "inverse-primary": "#be0f09",
+                "ink-white": "#FFFFFF",
+                "on-error-container": "#ffdad6",
+                "tertiary-container": "#0074c8",
+                "on-secondary-fixed-variant": "#474746",
+                "hairline": "#303030",
+                "error": "#ffb4ab",
+                "on-tertiary-fixed": "#001c37",
+                "error-container": "#93000a",
+                "rosso-corsa": "#DA291C",
+                "primary-container": "#da291c",
+                "canvas-elevated": "#303030",
+                "primary": "#ffb4a8",
+                "tertiary-fixed": "#d2e4ff",
+                "canvas": "#181818",
+                "on-primary-container": "#fff5f3",
+                "tertiary": "#a1c9ff",
+                "surface": "#121414",
+                "secondary-fixed-dim": "#c8c6c5",
+                "tertiary-fixed-dim": "#a1c9ff",
+                "on-secondary-fixed": "#1c1b1b",
+                "background": "#121414",
+                "outline-variant": "#5c403b",
+                "on-tertiary-fixed-variant": "#004880",
+                "surface-container-high": "#292a2a",
+                "inverse-surface": "#e3e2e2",
+                "secondary-container": "#474746",
+                "surface-dim": "#121414",
+                "primary-fixed-dim": "#ffb4a8",
+                "on-surface": "#e3e2e2",
+                "surface-bright": "#383939",
+                "surface-container": "#1f2020",
+                "rosso-active": "#B01E0A",
+                "on-primary-fixed": "#410000",
+                "on-primary": "#690000"
+              },
+              "borderRadius": {
+                "DEFAULT": "0px",
+                "lg": "0px",
+                "xl": "0px",
+                "full": "9999px"
+              },
+              "spacing": {
+                "md": "2rem",
+                "super": "8rem",
+                "xxs": "0.5rem",
+                "xxl": "6rem",
+                "xs": "1rem",
+                "xl": "4rem",
+                "max-content-width": "1280px",
+                "lg": "3rem",
+                "sm": "1.5rem"
+              },
+              "fontFamily": {
+                "button-label": ["Hanken Grotesk"],
+                "caption-upper": ["Hanken Grotesk"],
+                "display-mega-mobile": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"],
+                "display-mega": ["Hanken Grotesk"],
+                "body-md": ["Hanken Grotesk"],
+                "title-md": ["Hanken Grotesk"],
+                "nav-link": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                "button-label": ["14px", {"lineHeight": "1.0", "letterSpacing": "1.4px", "fontWeight": "700"}],
+                "caption-upper": ["11px", {"lineHeight": "1.4", "letterSpacing": "1.1px", "fontWeight": "600"}],
+                "display-mega-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.5px", "fontWeight": "500"}],
+                "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.36px", "fontWeight": "500"}],
+                "display-mega": ["80px", {"lineHeight": "1.05", "letterSpacing": "-1.6px", "fontWeight": "500"}],
+                "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                "title-md": ["18px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700"}],
+                "nav-link": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.65px", "fontWeight": "600"}]
+              }
             }
-          },
-        },
-      }
-    }catch(_e){}</script><link href="https://lh3.googleusercontent.com/aida-public/AB6AXuA-MVKF1KjEd7HIHt9Dau0IU29N8TzY_h5GcijzxVMc-dd8tPWRRWyQukGAl1IZA6lu9rd8gvT2ixb4EqBDXSC9Oz2hiZ6ZxQ3V0UR1o3Li3u0gBPWoj8In7LsD3CrRZwIEXhHTIooISH3HLmWH7FfmSe_nUE3faTGvegCkRQUmUXYxb4MntlqqBbIxbfxqkf_XdF7_8z1Yeu1zUydXhoKNmlkSJnX8_TTgutkaCf4WMNV6CbFvIYE8bzjE7ynHa0dP8A" rel="icon" type="image/png"></head><body class="font-body-md overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full h-auto py-md z-50 bg-canvas/90 dark:bg-canvas/90 backdrop-blur-md border-b border-hairline">
-<div class="flex items-center justify-between px-md max-w-max-content-width mx-auto h-full"><div class="flex flex-col items-center w-full gap-sm">
+          }
+        };
+      } catch (_e) {}
+    </script>
+<link href="https://lh3.googleusercontent.com/aida-public/AB6AXuA-MVKF1KjEd7HIHt9Dau0IU29N8TzY_h5GcijzxVMc-dd8tPWRRWyQukGAl1IZA6lu9rd8gvT2ixb4EqBDXSC9Oz2hiZ6ZxQ3V0UR1o3Li3u0gBPWoj8In7LsD3CrRZwIEXhHTIooISH3HLmWH7FfmSe_nUE3faTGvegCkRQUmUXYxb4MntlqqBbIxbfxqkf_XdF7_8z1Yeu1zUydXhoKNmlkSJnX8_TTgutkaCf4WMNV6CbFvIYE8bzjE7ynHa0dP8A" rel="icon" type="image/png">
+</head>
+<body class="font-body-md overflow-x-hidden bg-canvas">
+<!-- Component: Header -->
+<header class="fixed top-0 w-full h-auto py-md z-50 bg-canvas/90 backdrop-blur-md border-b border-hairline">
+<div class="flex items-center justify-between px-md max-w-max-content-width mx-auto h-full">
+<div class="flex flex-col items-center w-full gap-sm">
 <!-- Tier 1: Logo -->
 <div class="flex justify-center">
-<a class="block" href="/index"><img alt="MBC Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC14B3xIz8ArLGBVrdBDpTKJSI42RdEnJ88jgpzmupgTD70e1I5LpXtBD0sdnUiN57CFGStRnJavdqCuUUeRJdlajykDuR8i5V498PwydSsvfTWSSGdIKNCGoUal-tdKHZA5-CEdnYmW5vkedfsIbxYadflNhlSjeOKqvBPIcQN0Vjw3nc4mJ-5yNXsdcWf-wltFaHaFEGd4hmjg1yw8uZMHsk-UK0j7Kfr84C3YKDCvZ677DMSJrNCxfdalJ0BhRg-Uw" style="height: 72px; width: auto; image-rendering: crisp-edges;"></a>
+<a class="block" href="/">
+<img alt="MBC Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa1PC2a6VhnSSdSjAFBIihusUV1POwDRWnLhnOg_tKmCWFN_FGup6vHAjI75xx1b_utIXzoRLNqIdIq6T8xarHsA0PSZ1E-uVD55kElV-TOq9MWdyKfoCaQ-xCGla9R22bZ9F6fymNoGGT1GovAWuf2kFIHZb6veirpr2p2eVzXsoZpqcO--ZZzOtZXds-2pEh1pOcpjqmbAdD0bTyF631v0uWC_Q2k7jk6YEy0Srs9fzIwwQXvfFk6lDDDJc-RIEJAQ" style="height: 72px; width: auto; image-rendering: crisp-edges;">
+</a>
 </div>
 <!-- Tier 2: Brand Name -->
 <div class="text-center">
-<a class="font-display-lg text-display-lg font-bold tracking-tighter text-on-surface uppercase hover:text-rosso-corsa transition-colors" href="/index">MEDIA BY CHERNI</a>
+<a class="font-display-lg text-display-lg font-bold tracking-tighter text-on-surface uppercase hover:text-rosso-corsa transition-colors" href="/">MEDIA BY CHERNI</a>
 </div>
 <!-- Tier 3: Navigation & Action -->
-<div class="flex flex-wrap items-center justify-center gap-lg">
+<nav class="flex flex-wrap items-center justify-center gap-lg">
 <a class="font-nav-link text-nav-link uppercase tracking-[1.4px] transition-colors text-on-surface hover:text-rosso-corsa" href="/portfolio">PORTFOLIO</a>
 <a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="/about">ABOUT ME</a>
 <a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="/booking">BOOKING</a>
 <a class="bg-rosso-corsa text-ink-white px-md py-xxs font-button-label text-button-label uppercase tracking-[1.4px] hover:bg-rosso-active transition-all active:scale-95 ml-md inline-block" href="/booking">
-            INQUIRE
-        </a>
-</div>
-</div></div>
+                        INQUIRE
+                    </a>
 </nav>
+</div>
+</div>
+</header>
 <main class="pt-[220px]">
-<!-- Hero Section -->
+<!-- Component: Hero -->
 <section class="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-canvas">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full opacity-60 grayscale" data-alt="A cinematic, wide-angle shot of a classic European supercar parked on a mist-covered coastal road at dawn. The lighting is low-key and dramatic, with cool blue tones and deep blacks reflecting the Media By Cherni brand aesthetic. High-contrast shadows define the car's aerodynamic curves against the moody sky, creating an authoritative and luxurious atmosphere." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDqfwkYHXKkD80A46gzQH0haTP1566-MiCZK9RuP3KG0khA-Y_qIVB4Hynga-CNa2PT7JCs5xNGQAbEqKVIkbKNqf9fLBuBYdO-_Tea961BfDg4tPXb6081anptgB8FUNSeBw1YZ-IuU-SUmMcOfRtF8-gXifnEx5bl7odcxi2yjfCewsPDz7ci4z6Sxdq5aFNANYQAgP02EmRoWCj9uZ2FCf0JaIrPuuzpgUfnyL-sgZhRjAaStw3p&quot;);"></div>
+<div class="w-full h-full opacity-60 grayscale" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDqfwkYHXKkD80A46gzQH0haTP1566-MiCZK9RuP3KG0khA-Y_qIVB4Hynga-CNa2PT7JCs5xNGQAbEqKVIkbKNqf9fLBuBYdO-_Tea961BfDg4tPXb6081anptgB8FUNSeBw1YZ-IuU-SUmMcOfRtF8-gXifnEx5bl7odcxi2yjfCewsPDz7ci4z6Sxdq5aFNANYQAgP02EmRoWCj9uZ2FCf0JaIrPuuzpgUfnyL-sgZhRjAaStw3p&quot;); background-size: cover; background-position: center center;"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent"></div>
 </div>
 <div class="relative z-10 text-center px-md max-w-4xl">
@@ -138,11 +153,11 @@
 </div>
 </div>
 <div class="absolute bottom-md left-1/2 -translate-x-1/2 flex flex-col items-center gap-xxs opacity-40">
-<span class="font-caption-upper text-caption-upper uppercase">Scroll to Explore</span>
+<span class="font-caption-upper text-caption-upper uppercase text-[10px] tracking-widest">Scroll to Explore</span>
 <span class="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
 </div>
 </section>
-<!-- Structured Grid Section (Empty Slate) -->
+<!-- Component: Projects -->
 <section class="bg-canvas py-xxl">
 <div class="max-w-max-content-width mx-auto px-md">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-sm">
@@ -154,9 +169,9 @@
 <p class="font-body-md text-secondary reveal-up active">Coming soon. A collection of selected works.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-xl gap-x-md">
-<!-- Placeholder Grid Item 1 -->
+<!-- Project Item 1 -->
 <div class="group border-t border-hairline pt-md reveal-up active">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
+<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative overflow-hidden">
 <div class="absolute inset-0 flex items-center justify-center opacity-20">
 <span class="material-symbols-outlined text-6xl">photo_camera</span>
 </div>
@@ -169,9 +184,9 @@
 <span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
 </div>
 </div>
-<!-- Placeholder Grid Item 2 -->
+<!-- Project Item 2 -->
 <div class="group border-t border-hairline pt-md reveal-up active" style="transition-delay: 100ms;">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
+<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative overflow-hidden">
 <div class="absolute inset-0 flex items-center justify-center opacity-20">
 <span class="material-symbols-outlined text-6xl">videocam</span>
 </div>
@@ -184,9 +199,9 @@
 <span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
 </div>
 </div>
-<!-- Placeholder Grid Item 3 -->
+<!-- Project Item 3 -->
 <div class="group border-t border-hairline pt-md reveal-up active" style="transition-delay: 200ms;">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
+<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative overflow-hidden">
 <div class="absolute inset-0 flex items-center justify-center opacity-20">
 <span class="material-symbols-outlined text-6xl">speed</span>
 </div>
@@ -202,7 +217,7 @@
 </div>
 </div>
 </section>
-<!-- Featured Quote / Philosophy -->
+<!-- Component: Quote -->
 <section class="bg-surface py-xxl border-t border-hairline">
 <div class="max-w-max-content-width mx-auto px-md text-center">
 <div class="max-w-3xl mx-auto">
@@ -216,33 +231,64 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
+<!-- Component: Footer -->
 <footer class="w-full py-xl bg-canvas border-t border-hairline">
 <div class="flex flex-col md:flex-row justify-between items-center px-md max-w-max-content-width mx-auto gap-sm">
 <div class="flex flex-col items-center md:items-start gap-xxs">
-<a class="font-display-lg text-display-lg text-on-surface font-bold tracking-tighter hover:text-rosso-corsa transition-colors" href="/index">MEDIA BY CHERNI</a>
+<a class="font-display-lg text-display-lg text-on-surface font-bold tracking-tighter hover:text-rosso-corsa transition-colors" href="/">MEDIA BY CHERNI</a>
 <p class="font-caption-upper text-caption-upper text-secondary">© 2024 MEDIA BY CHERNI. ALL RIGHTS RESERVED.</p>
 </div>
 <div class="flex gap-lg">
-<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="index.html">INSTAGRAM</a>
-<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="index.html">BEHANCE</a>
-<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="index.html">VIMEO</a>
+<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="/">INSTAGRAM</a>
+<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="/">BEHANCE</a>
+<a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="/">VIMEO</a>
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-secondary hover:text-rosso-corsa transition-colors duration-300" href="/booking">CONTACT</a>
 </div>
 </div>
 </footer>
-<script class="">
-        // Simple scroll reveal animation
-        const observerOptions = {
-            threshold: 0.1
+<!-- Logic: Interaction (Translate to Angular ngAfterViewInit) -->
+<script>
+        /**
+         * Angular Component Conversion Tip:
+         * Move this intersection logic into a shared directive or a BaseComponent class
+         * and call it in the `ngAfterViewInit` lifecycle hook.
+         */
+        const initScrollReveal = () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Once revealed, no need to watch anymore (standard for scroll reveals)
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up').forEach(el => {
+                observer.observe(el);
+            });
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
+        // Initialize on DOM load
+        window.addEventListener('DOMContentLoaded', initScrollReveal);
+    </script>
+<style>
+        /* Base styles for the reveal animation */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 
-        document.querySelectorAll('.</script></body></html>
+
+</body></html>
