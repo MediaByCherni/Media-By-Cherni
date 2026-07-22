@@ -1,4 +1,12 @@
-<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ABOUT ME | MEDIA BY CHERNI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -98,20 +106,52 @@
           },
         },
       }
-    }catch(_e){}</script></head><body class="font-body-md overflow-x-hidden">
+    </script>
+<style>
+        body {
+            background-color: #121414;
+            color: #e3e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .image-reveal {
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .image-reveal.active {
+            clip-path: inset(0 0 0 0);
+        }
+        .text-kern-tight {
+            letter-spacing: -0.04em;
+        }
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: 9999;
+            background: url("https://grainy-gradients.vercel.app/noise.svg");
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
 <div class="noise-overlay"></div>
 <!-- Navigation Bar -->
 <nav class="fixed top-0 w-full h-16 bg-canvas/80 dark:bg-canvas/80 border-b border-hairline backdrop-blur-md z-50 transition-all duration-300">
 <div class="flex justify-between items-center px-xs md:px-md max-w-max-content-width mx-auto w-full h-full">
-<div class="font-display-lg text-display-lg font-medium text-on-surface tracking-[-0.36px]"><a href=" /" class="hover:text-rosso-corsa transition-colors">MEDIA BY CHERNI</a></div>
+<div class="font-display-lg text-display-lg font-medium text-on-surface tracking-[-0.36px]"><a href="{{DATA:SCREEN:SCREEN_11}}" class="hover:text-rosso-corsa transition-colors">MEDIA BY CHERNI</a></div>
 <div class="hidden md:flex gap-lg items-center">
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="/portfolio">PORTFOLIO</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-rosso-corsa font-bold border-b-2 border-rosso-corsa pb-1" href="/about">ABOUT ME</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="/booking">BOOKING</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_12}}">PORTFOLIO</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-rosso-corsa font-bold border-b-2 border-rosso-corsa pb-1" href="{{DATA:SCREEN:SCREEN_15}}">ABOUT ME</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_16}}">BOOKING</a>
 </div>
-<a href="/booking" class="bg-rosso-corsa text-ink-white font-button-label text-button-label px-md py-3 hover:bg-rosso-active transition-all active:scale-95 inline-flex items-center">
+<button class="bg-rosso-corsa text-ink-white font-button-label text-button-label px-md py-3 hover:bg-rosso-active transition-all active:scale-95">
                 INQUIRE
-            </a>
+            </button>
 </div>
 </nav>
 <main class="pt-16">
@@ -207,17 +247,17 @@
 </div>
 <div class="relative z-10 text-center max-w-2xl px-xs">
 <h2 class="font-display-lg text-display-lg text-ink-white mb-md">LET'S CAPTURE THE SOUL OF YOUR MACHINE.</h2>
-<a href="/booking" class="bg-rosso-corsa text-ink-white font-button-label text-button-label px-xl py-4 hover:bg-rosso-active transition-all tracking-[2px] inline-flex items-center gap-sm">
+<button class="bg-rosso-corsa text-ink-white font-button-label text-button-label px-xl py-4 hover:bg-rosso-active transition-all tracking-[2px] inline-flex items-center gap-sm">
                     BOOK A SESSION
                     <span class="material-symbols-outlined">arrow_forward</span>
-</a>
+</button>
 </div>
 </section>
 </main>
 <!-- Footer -->
 <footer class="bg-canvas border-t border-hairline">
 <div class="flex flex-col md:flex-row justify-between items-center px-xs md:px-md max-w-max-content-width mx-auto w-full py-lg gap-xs">
-<div class="font-display-lg text-display-lg text-on-surface"><a href=" /" class="hover:text-rosso-corsa transition-colors">MBC</a></div>
+<div class="font-display-lg text-display-lg text-on-surface">MBC</div>
 <div class="flex gap-md">
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant hover:text-rosso-corsa transition-colors" href="#">INSTAGRAM</a>
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant hover:text-rosso-corsa transition-colors" href="#">BEHANCE</a>
@@ -264,4 +304,6 @@
             });
         });
     </script>
+
+
 </body></html>
