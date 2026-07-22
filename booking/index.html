@@ -1,4 +1,39 @@
-<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BOOKING | MEDIA BY CHERNI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121414;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #303030;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #DA291C;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus {
+            -webkit-text-fill-color: #e3e2e2;
+            -webkit-box-shadow: 0 0 0px 1000px #181818 inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+<script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
           theme: {
@@ -98,17 +133,19 @@
             },
           },
         }
-    }catch(_e){}</script></head><body class="bg-background text-on-surface selection:bg-rosso-corsa selection:text-white overflow-x-hidden">
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-rosso-corsa selection:text-white overflow-x-hidden">
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full h-16 bg-canvas/80 border-b border-hairline backdrop-blur-md z-50 transition-all duration-300" id="top-nav">
 <div class="flex justify-between items-center px-xs md:px-md max-w-max-content-width mx-auto w-full h-full">
-<a class="font-display-lg text-display-lg font-medium text-on-surface tracking-[-0.36px] hover:opacity-80 transition-opacity" href=" /">MEDIA BY CHERNI</a>
+<a class="font-display-lg text-display-lg font-medium text-on-surface tracking-[-0.36px] hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_11}}">MEDIA BY CHERNI</a>
 <nav class="hidden md:flex items-center gap-md">
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="/portfolio">PORTFOLIO</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="/about">ABOUT ME</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-rosso-corsa font-bold border-b-2 border-rosso-corsa pb-1" href="/booking">BOOKING</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_12}}">PORTFOLIO</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_15}}">ABOUT ME</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-rosso-corsa font-bold border-b-2 border-rosso-corsa pb-1" href="{{DATA:SCREEN:SCREEN_16}}">BOOKING</a>
 </nav>
-<a href="/booking" class="bg-rosso-corsa text-white px-md py-xxs font-button-label text-button-label uppercase tracking-[1.4px] transition-transform duration-200 active:scale-95 inline-flex items-center">INQUIRE</a>
+<button class="bg-rosso-corsa text-white px-md py-xxs font-button-label text-button-label uppercase tracking-[1.4px] transition-transform duration-200 active:scale-95">INQUIRE</button>
 </div>
 </header>
 <main class="pt-32 pb-super">
@@ -197,7 +234,7 @@
 <!-- Footer -->
 <footer class="w-full py-lg border-t border-hairline bg-canvas">
 <div class="flex flex-col md:flex-row justify-between items-center px-xs md:px-md max-w-max-content-width mx-auto w-full gap-xs">
-<a href=" /" class="font-display-lg text-display-lg text-on-surface hover:opacity-80 transition-opacity">MEDIA BY CHERNI</a>
+<div class="font-display-lg text-display-lg text-on-surface">MEDIA BY CHERNI</div>
 <div class="flex gap-md">
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant hover:text-rosso-corsa transition-colors" href="#">INSTAGRAM</a>
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant hover:text-rosso-corsa transition-colors" href="#">BEHANCE</a>
@@ -208,7 +245,7 @@
             </div>
 </div>
 </footer>
-<script class="">
+<script>
         // Form Handling Logic
         const form = document.getElementById('booking-form');
         const successOverlay = document.getElementById('form-success');
@@ -217,4 +254,34 @@
             e.preventDefault();
             // Simulate submission
             const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submit</script></body></html>
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">refresh</span> SENDING...';
+            
+            setTimeout(() => {
+                successOverlay.classList.remove('hidden');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }, 1500);
+        });
+
+        function resetForm() {
+            form.reset();
+            successOverlay.classList.add('hidden');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-canvas/80');
+            } else {
+                nav.classList.remove('bg-background/95');
+                nav.classList.add('bg-canvas/80');
+            }
+        });
+    </script>
+
+
+</body></html>
