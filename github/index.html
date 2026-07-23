@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Media By Cherni | GitHub Connection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#930001",
+                        "on-tertiary-fixed": "#001c37",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-container-highest": "#343535",
+                        "on-tertiary-container": "#f5f7ff",
+                        "secondary": "#c8c6c5",
+                        "surface-bright": "#383939",
+                        "on-tertiary-fixed-variant": "#004880",
+                        "inverse-surface": "#e3e2e2",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "rosso-active": "#B01E0A",
+                        "primary-fixed": "#ffdad4",
+                        "outline": "#ac8883",
+                        "tertiary-fixed-dim": "#a1c9ff",
+                        "on-primary-container": "#fff5f3",
+                        "canvas-elevated": "#303030",
+                        "on-surface": "#e3e2e2",
+                        "hairline": "#303030",
+                        "outline-variant": "#5c403b",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "surface-variant": "#343535",
+                        "primary-container": "#da291c",
+                        "canvas": "#181818",
+                        "on-tertiary": "#00325a",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary": "#ffb4a8",
+                        "on-secondary-container": "#b7b4b4",
+                        "inverse-primary": "#be0f09",
+                        "background": "#121414",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-secondary": "#313030",
+                        "on-error": "#690005",
+                        "surface-container": "#1f2020",
+                        "secondary-container": "#474746",
+                        "tertiary-container": "#0074c8",
+                        "tertiary-fixed": "#d2e4ff",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-background": "#e3e2e2",
+                        "on-primary": "#690000",
+                        "surface-container-high": "#292a2a",
+                        "ink-white": "#FFFFFF",
+                        "surface-tint": "#ffb4a8",
+                        "rosso-corsa": "#DA291C",
+                        "on-surface-variant": "#e6bdb7",
+                        "on-primary-fixed": "#410000",
+                        "tertiary": "#a1c9ff",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-dim": "#121414",
+                        "secondary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "1rem",
+                        "xxl": "6rem",
+                        "sm": "1.5rem",
+                        "md": "2rem",
+                        "max-content-width": "1280px",
+                        "xl": "4rem",
+                        "lg": "3rem",
+                        "super": "8rem",
+                        "xxs": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "display-mega": ["Hanken Grotesk"],
+                        "button-label": ["Hanken Grotesk"],
+                        "nav-link": ["Hanken Grotesk"],
+                        "display-mega-mobile": ["Hanken Grotesk"],
+                        "title-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "caption-upper": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-mega": ["80px", {"lineHeight": "1.05", "letterSpacing": "-1.6px", "fontWeight": "500"}],
+                        "button-label": ["14px", {"lineHeight": "1.0", "letterSpacing": "1.4px", "fontWeight": "700"}],
+                        "nav-link": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.65px", "fontWeight": "600"}],
+                        "display-mega-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.5px", "fontWeight": "500"}],
+                        "title-md": ["18px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.36px", "fontWeight": "500"}],
+                        "caption-upper": ["11px", {"lineHeight": "1.4", "letterSpacing": "1.1px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #121414;
+            color: #e3e2e2;
+            font-family: 'Hanken Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cinematic-gradient {
+            background: linear-gradient(180deg, rgba(24, 24, 24, 0) 0%, rgba(18, 20, 20, 1) 100%);
+        }
+        input:focus {
+            outline: none;
+            border-color: #DA291C !important;
+        }
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-hover-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        .btn-hover-effect:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-rosso-corsa selection:text-white">
+<!-- Cinematic Background Ambient -->
+<div class="fixed inset-0 z-0 pointer-events-none opacity-20">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-rosso-corsa/10 via-transparent to-transparent"></div>
+</div>
+<!-- Main Content Shell -->
+<main class="relative z-10 min-h-screen flex items-center justify-center px-xs py-xl">
+<div class="w-full max-w-md space-y-lg">
+<!-- Brand Anchor -->
+<div class="text-center space-y-xxs">
+<h1 class="font-display-lg text-display-lg uppercase tracking-wider text-on-surface">
+                    Media By Cherni
+                </h1>
+<p class="font-caption-upper text-caption-upper text-secondary tracking-[2px] uppercase">
+                    Admin Console • Pipeline v2.4.0
+                </p>
+</div>
+<!-- Login Card -->
+<div class="bg-canvas border border-hairline p-md shadow-2xl space-y-md">
+<div class="flex flex-col items-center space-y-xs">
+<!-- Secure Connection Badge -->
+<div class="flex items-center gap-xxs px-xxs py-[2px] bg-surface-container-high border border-hairline">
+<span class="material-symbols-outlined text-[14px] text-rosso-corsa" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-caption-upper text-caption-upper text-on-surface">SECURE CONNECTION</span>
+</div>
+<div class="text-center space-y-xxs">
+<h2 class="font-title-md text-title-md text-on-surface uppercase">Repository Synchronization</h2>
+<p class="font-body-md text-body-md text-secondary">Connect your high-performance portfolio assets.</p>
+</div>
+</div>
+<!-- OAuth Action -->
+<button class="w-full h-12 bg-rosso-corsa text-ink-white font-button-label text-button-label uppercase flex items-center justify-center gap-xs btn-hover-effect active:scale-95">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+</svg>
+<span>Sign in with GitHub</span>
+</button>
+<!-- Separator -->
+<div class="flex items-center gap-xs">
+<div class="h-px bg-hairline flex-grow"></div>
+<span class="font-caption-upper text-caption-upper text-secondary">OR</span>
+<div class="h-px bg-hairline flex-grow"></div>
+</div>
+<!-- Manual Connection Fields -->
+<form class="space-y-sm" onsubmit="event.preventDefault();">
+<div class="space-y-xxs">
+<label class="font-caption-upper text-caption-upper text-secondary uppercase tracking-widest">Repository URL</label>
+<input class="w-full h-12 bg-canvas border border-hairline px-xs text-on-surface font-body-md focus:border-rosso-corsa transition-colors placeholder:opacity-30" placeholder="https://github.com/cherni/portfolio-v2" type="text"/>
+</div>
+<div class="space-y-xxs relative">
+<label class="font-caption-upper text-caption-upper text-secondary uppercase tracking-widest">Personal Access Token</label>
+<input class="w-full h-12 bg-canvas border border-hairline px-xs text-on-surface font-body-md focus:border-rosso-corsa transition-colors placeholder:opacity-30" placeholder="ghp_************************" type="password"/>
+<span class="absolute right-xs bottom-3 material-symbols-outlined text-secondary cursor-pointer select-none" onclick="togglePassword(this)">visibility</span>
+</div>
+<button class="w-full h-12 border border-ink-white text-ink-white font-button-label text-button-label uppercase hover:bg-ink-white hover:text-canvas transition-all duration-300">
+                        Initialize Manual Link
+                    </button>
+</form>
+</div>
+<!-- Deployment Infrastructure Note -->
+<div class="bg-surface-container-low border-l-2 border-rosso-corsa p-sm space-y-xxs">
+<div class="flex items-center gap-xxs mb-xxs">
+<span class="material-symbols-outlined text-secondary text-[18px]">dns</span>
+<h3 class="font-caption-upper text-caption-upper text-on-surface">Porkbun Static Hosting Interface</h3>
+</div>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                    Connecting your GitHub repository triggers the high-performance CI/CD pipeline. Your optimized photographic assets are compiled and pushed directly to your <span class="text-on-surface font-semibold">Porkbun Static Hosting</span> endpoint via secure webhook, ensuring sub-second delivery globally.
+                </p>
+</div>
+<!-- Footer Meta -->
+<div class="flex justify-between items-center px-xs pt-xs">
+<span class="font-caption-upper text-caption-upper text-secondary/50">System Status: <span class="text-green-500">Operational</span></span>
+<a class="font-caption-upper text-caption-upper text-secondary hover:text-rosso-corsa transition-colors underline underline-offset-4" href="#">Legal &amp; Security</a>
+</div>
+</div>
+</main>
+<!-- Visual Polish: Floating "Film Grain" Texture Overlay -->
+<div class="fixed inset-0 pointer-events-none z-[100] opacity-[0.03]" style="background-image: url('https://www.transparenttextures.com/patterns/stardust.png');"></div>
+<script>
+        function togglePassword(icon) {
+            const input = icon.previousElementSibling;
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.innerText = 'visibility_off';
+            } else {
+                input.type = 'password';
+                icon.innerText = 'visibility';
+            }
+        }
+
+        // Simple entrance animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const main = document.querySelector('main');
+            main.style.opacity = '0';
+            main.style.transform = 'translateY(20px)';
+            main.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            
+            setTimeout(() => {
+                main.style.opacity = '1';
+                main.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body></html>
