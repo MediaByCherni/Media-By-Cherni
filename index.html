@@ -99,6 +99,101 @@
         },
       }
     }catch(_e){}</script><link href="/favicon.png" rel="icon" type="image/png">
+ <style>
+        /* Scroll / entrance reveal */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Cinematic slow zoom on the hero image */
+        .hero-image {
+            animation: heroZoom 18s ease-out forwards;
+        }
+        @keyframes heroZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.08); }
+        }
+
+        /* Thumbnail hover zoom */
+        .image-zoom-container {
+            overflow: hidden;
+        }
+        .image-zoom-container img,
+        .image-zoom-container .material-symbols-outlined {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .image-zoom-container img,
+        .group:hover .image-zoom-container .material-symbols-outlined {
+            transform: scale(1.1);
+        }
+
+        /* Sticky Header Transitions */
+        nav {
+            transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav .logo-img {
+            transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav .brand-name {
+            transition: font-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Scrolled State */
+        .nav-scrolled {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+            background-color: rgba(24, 24, 24, 0.98) !important; /* Higher opacity canvas */
+        }
+        .nav-scrolled .logo-img {
+            height: 48px !important;
+        }
+        .nav-scrolled .brand-name {
+            font-size: 1.25rem !important; /* Slightly smaller than display-lg (36px) */
+        }
+        .nav-scrolled .nav-tier-gap {
+            gap: 0.5rem !important;
+        }
+
+        /* Mobile: shorter travel distance + snappier timing */
+        @media (max-width: 767px) {
+            .reveal-up {
+                transform: translateY(16px);
+                transition-duration: 0.6s;
+            }
+            .hero-image {
+                animation-duration: 12s;
+            }
+            .nav-scrolled .brand-name {
+                font-size: 1rem !important;
+            }
+        }
+
+        /* Respect reduced-motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .hero-image {
+                animation: none;
+            }
+            .image-zoom-container img,
+            .image-zoom-container .material-symbols-outlined {
+                transition: none;
+            }
+            nav, nav .logo-img, nav .brand-name {
+                transition: none;
+            }
+        }
+</style>
+</head><body class="font-body-md overflow-x-hidden">
 <style>
         /* Scroll / entrance reveal */
         .reveal-up {
