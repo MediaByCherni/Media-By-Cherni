@@ -98,7 +98,70 @@
           },
         },
       }
-    }catch(_e){}</script><link href="/favicon.png" rel="icon" type="image/png"></head><body class="font-body-md overflow-x-hidden">
+    }catch(_e){}</script><link href="/favicon.png" rel="icon" type="image/png">
+<style>
+        /* Scroll / entrance reveal */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Cinematic slow zoom on the hero image */
+        .hero-image {
+            animation: heroZoom 18s ease-out forwards;
+        }
+        @keyframes heroZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.08); }
+        }
+
+        /* Thumbnail hover zoom */
+        .image-zoom-container {
+            overflow: hidden;
+        }
+        .image-zoom-container img,
+        .image-zoom-container .material-symbols-outlined {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .image-zoom-container img,
+        .group:hover .image-zoom-container .material-symbols-outlined {
+            transform: scale(1.1);
+        }
+
+        /* Mobile: shorter travel distance + snappier timing */
+        @media (max-width: 767px) {
+            .reveal-up {
+                transform: translateY(16px);
+                transition-duration: 0.6s;
+            }
+            .hero-image {
+                animation-duration: 12s;
+            }
+        }
+
+        /* Respect reduced-motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .hero-image {
+                animation: none;
+            }
+            .image-zoom-container img,
+            .image-zoom-container .material-symbols-outlined {
+                transition: none;
+            }
+        }
+    </style>
+</head><body class="font-body-md overflow-x-hidden">
+<noscript><style>.reveal-up{opacity:1!important;transform:none!important;}</style></noscript>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full h-auto py-md z-50 bg-canvas/90 dark:bg-canvas/90 backdrop-blur-md border-b border-hairline">
 <div class="flex items-center justify-between px-md max-w-max-content-width mx-auto h-full"><div class="flex flex-col items-center w-full gap-sm">
@@ -125,15 +188,15 @@
 <!-- Hero Section -->
 <section class="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-canvas">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A cinematic low-angle long exposure shot of a sleek, dark metallic Italian supercar speeding through a neon-lit urban tunnel at midnight. The Rosso Corsa red taillights create vibrant light streaks against the near-black concrete walls. High-contrast lighting emphasizes the car's aggressive aerodynamic curves, creating a high-end luxury automotive photography aesthetic consistent with a premium portfolio." src="https://i.postimg.cc/MZR1v2mD/fords-landing-cherry-blossoms-alexandria-va-9.jpg" alt='fords-landing-cherry-blossoms-alexandria-va-9'>
+<img class="w-full h-full object-cover hero-image" data-alt="A cinematic low-angle long exposure shot of a sleek, dark metallic Italian supercar speeding through a neon-lit urban tunnel at midnight. The Rosso Corsa red taillights create vibrant light streaks against the near-black concrete walls. High-contrast lighting emphasizes the car's aggressive aerodynamic curves, creating a high-end luxury automotive photography aesthetic consistent with a premium portfolio." src="https://i.postimg.cc/MZR1v2mD/fords-landing-cherry-blossoms-alexandria-va-9.jpg" alt='fords-landing-cherry-blossoms-alexandria-va-9'>
 <div class="relative z-10 max-w-max-content-width mx-auto w-full px-xs md:px-md pb-xl">
 <div class="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent"></div>
   </div>
   <div class="relative z-10 text-center px-md max-w-4xl">
-      <span class="block font-caption-upper text-caption-upper text-rosso-corsa mb-xs tracking-[4px] reveal-up active">ESTABLISHED MMXXIV</span>
-      <h1 class="font-display-mega text-display-mega-mobile md:text-display-mega text-on-surface mb-sm leading-none tracking-tighter reveal-up active">CINEMATIC VISION</h1>
-      <p class="font-body-md text-secondary max-w-xl mx-auto reveal-up active">Capturing high-velocity precision and technical excellence through a refined automotive lens.</p>
-  <div class="mt-lg flex justify-center gap-sm reveal-up active">
+      <span class="block font-caption-upper text-caption-upper text-rosso-corsa mb-xs tracking-[4px] reveal-up">ESTABLISHED MMXXIV</span>
+      <h1 class="font-display-mega text-display-mega-mobile md:text-display-mega text-on-surface mb-sm leading-none tracking-tighter reveal-up" style="transition-delay: 100ms;">CINEMATIC VISION</h1>
+      <p class="font-body-md text-secondary max-w-xl mx-auto reveal-up" style="transition-delay: 200ms;">Capturing high-velocity precision and technical excellence through a refined automotive lens.</p>
+  <div class="mt-lg flex justify-center gap-sm reveal-up" style="transition-delay: 300ms;">
 <a class="bg-rosso-corsa text-ink-white px-xl py-xs font-button-label text-button-label uppercase inline-block" href="/portfolio">VIEW WORK</a>
 <a class="border border-on-surface text-on-surface px-xl py-xs font-button-label text-button-label uppercase hover:bg-on-surface hover:text-canvas transition-colors inline-block" href="/about">THE STUDIO</a>
 </div>
@@ -147,16 +210,16 @@
 <section class="bg-canvas py-xxl">
 <div class="max-w-max-content-width mx-auto px-md">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-sm">
-<div class="reveal-up active">
+<div class="reveal-up">
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">LATEST SERIES</span>
 <h2 class="font-display-lg text-display-lg text-on-surface">EDITORIAL PROJECTS</h2>
 </div>
-<div class="h-px flex-1 bg-hairline mx-lg hidden md:block reveal-up active"></div>
-<p class="font-body-md text-secondary reveal-up active">Coming soon. A collection of selected works.</p>
+<div class="h-px flex-1 bg-hairline mx-lg hidden md:block reveal-up"></div>
+<p class="font-body-md text-secondary reveal-up">Coming soon. A collection of selected works.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-xl gap-x-md">
 <!-- Placeholder Grid Item 1 -->
-<div class="group border-t border-hairline pt-md reveal-up active">
+<div class="group border-t border-hairline pt-md reveal-up">
 <div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
 <div class="absolute inset-0 flex items-center justify-center opacity-20">
 <span class="material-symbols-outlined text-6xl">photo_camera</span>
@@ -171,7 +234,7 @@
 </div>
 </div>
 <!-- Placeholder Grid Item 2 -->
-<div class="group border-t border-hairline pt-md reveal-up active" style="transition-delay: 100ms;">
+<div class="group border-t border-hairline pt-md reveal-up" style="transition-delay: 100ms;">
 <div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
 <div class="absolute inset-0 flex items-center justify-center opacity-20">
 <span class="material-symbols-outlined text-6xl">videocam</span>
@@ -186,7 +249,7 @@
 </div>
 </div>
 <!-- Placeholder Grid Item 3 -->
-<div class="group border-t border-hairline pt-md reveal-up active" style="transition-delay: 200ms;">
+<div class="group border-t border-hairline pt-md reveal-up" style="transition-delay: 200ms;">
 <div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
 <div class="absolute inset-0 flex items-center justify-center opacity-20">
 <span class="material-symbols-outlined text-6xl">speed</span>
@@ -208,11 +271,11 @@
 <div class="max-w-max-content-width mx-auto px-md text-center">
 <div class="max-w-3xl mx-auto">
 <span class="material-symbols-outlined text-rosso-corsa text-4xl mb-md" data-weight="fill">format_quote</span>
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface italic leading-tight reveal-up active">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface italic leading-tight reveal-up">
                         "The intersection of speed and light requires more than just a camera; it requires a deep technical reverence for the machine."
                     </h2>
-<div class="w-12 h-1 bg-rosso-corsa mx-auto mt-lg mb-sm reveal-up active"></div>
-<span class="font-caption-upper text-caption-upper tracking-[2px] reveal-up active">CHERNI — CREATIVE DIRECTOR</span>
+<div class="w-12 h-1 bg-rosso-corsa mx-auto mt-lg mb-sm reveal-up" style="transition-delay: 100ms;"></div>
+<span class="font-caption-upper text-caption-upper tracking-[2px] reveal-up" style="transition-delay: 200ms;">CHERNI — CREATIVE DIRECTOR</span>
 </div>
 </div>
 </section>
@@ -232,18 +295,21 @@
 </div>
 </div>
 </footer>
-<script class="">
-        // Simple scroll reveal animation
+<script>
+        // Scroll + entrance reveal animation
         const observerOptions = {
-            threshold: 0.1
+            threshold: 0.1,
+            rootMargin: '0px 0px -10% 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.</script></body></html>
+        document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
+    </script></body></html>
