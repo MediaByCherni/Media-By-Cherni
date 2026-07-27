@@ -452,13 +452,17 @@
         // Sticky Header Scroll Handling
         let ticking = false;
         function updateNav() {
-            if (window.scrollY > 50) {
-                nav.classList.add('nav-scrolled');
-            } else if (window.innerWidth >= 768) {
-                nav.classList.remove('nav-scrolled');
-            } else {
-                // Mobile always behaves like "scrolled" for layout simplicity
-                nav.classList.add('nav-scrolled');
+            const wasScrolled = nav.classList.contains('nav-scrolled');
+            const shouldBeScrolled = window.scrollY > 50 || window.innerWidth < 768;
+            nav.classList.toggle('nav-scrolled', shouldBeScrolled);
+            if (wasScrolled !== shouldBeScrolled) {
+                // The nav's height doesn't jump — it animates over 0.6s via
+                // CSS transition. ResizeObserver/transitionend alone can lag
+                // a frame or two behind that animation, leaving a brief gap
+                // between the nav and the sticky filter bar mid-transition.
+                // Re-measure every frame for the duration of the animation
+                // so the filter bar's offset tracks the nav in lockstep.
+                animateSyncDuringTransition();
             }
             ticking = false;
         }
@@ -470,6 +474,15 @@
         });
         updateNav();
         window.addEventListener('resize', updateNav);
+
+        function animateSyncDuringTransition() {
+            const start = performance.now();
+            function step(now) {
+                syncMainOffset();
+                if (now - start < 700) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+        }
 
         // Keep main's top offset (and the sticky filter bar) locked to the
         // header's real rendered height, which changes across breakpoints
