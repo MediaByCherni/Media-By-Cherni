@@ -179,6 +179,8 @@
 
         .drawer-transition { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .overlay-transition { transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     </style><link href="/favicon.png" rel="icon" type="image/png"/></head><body class="font-body-md overflow-x-hidden bg-background text-on-surface">
 <!-- Navigation Drawer Overlay -->
 <div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] opacity-0 pointer-events-none overlay-transition" id="drawer-overlay"></div>
@@ -253,10 +255,10 @@
 </nav>
 <main class="pt-[76px] md:pt-[260px]" id="page-main">
 <!-- Hero Section -->
-<section class="relative w-full h-[1280px] flex items-end overflow-hidden">
+<section class="relative w-full h-[819px] flex items-end overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-<img class="w-full h-full object-cover" data-alt="A cinematic low-angle long exposure shot of a sleek, dark metallic Italian supercar speeding through a neon-lit urban tunnel at midnight. The Rosso Corsa red taillights create vibrant light streaks against the near-black concrete walls. High-contrast lighting emphasizes the car's aggressive aerodynamic curves, creating a high-end luxury automotive photography aesthetic consistent with a premium portfolio." <img src="https://i.postimg.cc/K4G1HWVk/fords-landing-cherry-blossoms-alexandria-va-9.jpg" alt="fords-landing-cherry-blossoms-alexandria-va-9">
+<img alt="mbc-logo-white" class="w-full h-full object-cover" data-alt="A cinematic low-angle long exposure shot of a sleek, dark metallic Italian supercar speeding through a neon-lit urban tunnel at midnight. The Rosso Corsa red taillights create vibrant light streaks against the near-black concrete walls. High-contrast lighting emphasizes the car's aggressive aerodynamic curves, creating a high-end luxury automotive photography aesthetic consistent with a premium portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGroUIcKnu0kyHjtXfw9qnEl52J57pbEgllnkcjYcNM36xV-xXnx5cD2xZdJEF35sVMqBsVZBLDGerxbuk3cDc7bgNl4oHIcN1L3aPeU0ErMXxtKna0jWTcagT50dUOlTtIpOqX81x2nVc7qj1_tDZp0SElzDs2kIDwMSc_OgShIJX8aqVx4zKhKW4rqPr4Rg5novUJx5OqJ6uaEPlqlO17k9MB_Yq7pvEU6zE3zdUEvvkXcloYBnphIJYk31bUk1isgqDq9Xx4Cyq"/>
 </div>
 <div class="relative z-10 max-w-max-content-width mx-auto w-full px-xs md:px-md pb-xl">
 <div class="max-w-2xl">
@@ -355,7 +357,7 @@
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
 </div>
 </div>
-<!-- Project 6: Nature (New) -->
+<!-- Project 6: Nature -->
 <div class="md:col-span-8 group portfolio-card visible" data-category="nature">
 <div class="overflow-hidden bg-canvas-elevated aspect-[16/9] mb-sm cursor-pointer relative overflow-hidden">
 <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Ethereal Mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAMMtYSM6erfyDiAXbuJQ5RI6yszwgNoa4si0Xr4mr3IOjfTWU0qyUjQLx8epz3_639HxZfisVvUPPT1RHbnu7ltB6C-uygGi27bIitxTKzBNAHhbJZwDXxjfWAx8PU85Ns0iD1qB4PoimWXIbXu0nXlr0vpeWk1-Sw2dfWZ5qtToa8pE9PoEm77Uy0letphbHPN4VodMaLovOQLBC4_y6VQC9GxPNUqo7D2n5DumeB0BZlEUpsdA3ulskluj3itADtbrObAYMQdv9"/>
@@ -369,7 +371,7 @@
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
 </div>
 </div>
-<!-- Project 7: Nature (New) -->
+<!-- Project 7: Nature -->
 <div class="md:col-span-4 group portfolio-card visible" data-category="nature">
 <div class="overflow-hidden bg-canvas-elevated aspect-[3/4] mb-sm cursor-pointer relative overflow-hidden">
 <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Silent Peak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAxBp88m_gn-4w9_4aZ3QmC1n8d1VmlS3VTr17MvciJ8tRo9t6QQjgXClTW27rdRbX5C8Gc3Ev45gEAx0UIyjps-Om3fHxVASL3UqCgQNlAids-Ql9nzbdndOpS3XOmxKhupFDV6nP5eD8jvgeT7osZKqaAylWJcj9cs_AH-bG1xO5-rTnJ-Jq-unsBd8b_M4mj2RMgKBVfc-Jly0Sb17zxIUrOSUzZj4KwzjE1w0PVcLW0vCmOOFuy6SxWAoAGTc4wMHJf4MqIb6k"/>
@@ -475,6 +477,28 @@
         // Escape key to close drawer
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeDrawer();
+        });
+
+        // Portfolio Grid Filtering
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+
+                tabButtons.forEach(b => {
+                    b.classList.remove('text-rosso-corsa', 'border-rosso-corsa');
+                    b.classList.add('text-secondary', 'border-transparent');
+                });
+                btn.classList.remove('text-secondary', 'border-transparent');
+                btn.classList.add('text-rosso-corsa', 'border-rosso-corsa');
+
+                portfolioCards.forEach(card => {
+                    const show = category === 'all' || card.dataset.category === category;
+                    card.classList.toggle('hidden', !show);
+                });
+            });
         });
     });
 </script>
