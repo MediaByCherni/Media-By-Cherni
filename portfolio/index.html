@@ -270,14 +270,15 @@
 </div>
 </div>
 </section>
-<!-- Filter / Stats Section -->
-<section class="border-y border-hairline bg-canvas py-md">
+<!-- Filter Section -->
+<section class="border-y border-hairline bg-canvas py-md sticky top-16 md:top-24 z-40 backdrop-blur-sm">
 <div class="max-w-max-content-width mx-auto px-xs md:px-md flex flex-wrap justify-between items-center gap-md">
-<div class="flex gap-md overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
-<button class="whitespace-nowrap font-caption-upper text-caption-upper text-rosso-corsa border-b border-rosso-corsa pb-1">ALL SERIES</button>
-<button class="whitespace-nowrap font-caption-upper text-caption-upper text-secondary hover:text-on-surface transition-colors">TRACK DAYS</button>
-<button class="whitespace-nowrap font-caption-upper text-caption-upper text-secondary hover:text-on-surface transition-colors">STUDIO RIGS</button>
-<button class="whitespace-nowrap font-caption-upper text-caption-upper text-secondary hover:text-on-surface transition-colors">EDITORIAL</button>
+<div class="flex gap-md overflow-x-auto pb-2 md:pb-0 scrollbar-hide" id="portfolio-tabs">
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 pb-1 transition-all text-rosso-corsa border-rosso-corsa" data-category="all">ALL</button>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="portraits">PORTRAITS</button>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="automotive">AUTOMOTIVE</button>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="landscape">LANDSCAPE</button>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="nature">NATURE</button>
 </div>
 <div class="flex items-center gap-sm">
 <span class="material-symbols-outlined text-rosso-corsa" style="font-variation-settings: 'FILL' 1;">speed</span>
