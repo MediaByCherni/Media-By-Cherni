@@ -259,29 +259,40 @@
 <body class="font-body-md overflow-x-hidden bg-canvas text-on-surface">
 <noscript><style>.reveal-up{opacity:1!important;transform:none!important;}</style></noscript>
 <!-- Side Navigation Drawer -->
-<div class="fixed inset-0 z-[100] flex justify-end" id="side-nav-container">
-<div class="absolute inset-0 bg-black/80 backdrop-blur-sm" id="side-nav-overlay"></div>
-<div class="relative w-full max-w-sm h-full bg-surface-container-highest border-l border-hairline p-md flex flex-col shadow-2xl" id="side-nav">
-<div class="flex justify-between items-center mb-xl">
-<span class="font-caption-upper text-caption-upper tracking-[2px] text-secondary">NAVIGATION</span>
-<button aria-label="Close menu" class="p-xs text-on-surface hover:text-rosso-corsa transition-colors" id="menu-close">
-<span class="material-symbols-outlined text-3xl">close</span>
+<div class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-canvas border-l border-hairline z-[70] translate-x-full drawer-transition" id="side-drawer">
+<div class="flex flex-col h-full p-md md:p-xl">
+<div class="flex justify-between items-center mb-xxl">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa tracking-[2px]">NAVIGATION</span>
+<button class="text-on-surface hover:text-rosso-corsa transition-colors" id="close-drawer">
+<span class="material-symbols-outlined text-[32px]">close</span>
 </button>
 </div>
-<div class="flex flex-col gap-lg mt-md">
-<a class="font-display-lg text-display-lg text-on-surface hover:text-rosso-corsa transition-colors" href="/portfolio/">PORTFOLIO</a>
-<a class="font-display-lg text-display-lg text-on-surface hover:text-rosso-corsa transition-colors" href="/about/">ABOUT ME</a>
-<a class="font-display-lg text-display-lg text-on-surface hover:text-rosso-corsa transition-colors" href="/booking/">BOOKING</a>
-<div class="h-px bg-hairline my-md"></div>
-<a class="bg-rosso-corsa text-ink-white px-md py-sm text-center font-button-label text-button-label uppercase tracking-[2px] hover:bg-rosso-active transition-all active:scale-95" href="/booking">
-                    INQUIRE NOW
-                </a>
-</div>
-<div class="mt-auto pt-xl flex flex-col gap-sm">
-<span class="font-caption-upper text-caption-upper text-secondary">SOCIAL</span>
-<div class="flex gap-md">
-<a class="text-on-surface hover:text-rosso-corsa transition-colors text-sm tracking-widest font-bold" href="#">INSTAGRAM</a>
-<a class="text-on-surface hover:text-rosso-corsa transition-colors text-sm tracking-widest font-bold" href="#">BEHANCE</a>
+<nav class="flex flex-col gap-lg">
+<a class="group flex items-baseline gap-md" href="/">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">01</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase text-rosso-corsa">HOME</span>
+</a>
+<a class="group flex items-baseline gap-md" href="/portfolio/">
+<span class="font-caption-upper text-caption-upper text-secondary group-hover:text-rosso-corsa transition-colors">02</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase group-hover:translate-x-4 transition-transform duration-500">PORTFOLIO</span>
+</a>
+<a class="group flex items-baseline gap-md" href="/about/">
+<span class="font-caption-upper text-caption-upper text-secondary group-hover:text-rosso-corsa transition-colors">03</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase group-hover:translate-x-4 transition-transform duration-500">ABOUT ME</span>
+</a>
+<a class="group flex items-baseline gap-md" href="/booking/">
+<span class="font-caption-upper text-caption-upper text-secondary group-hover:text-rosso-corsa transition-colors">04</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase group-hover:translate-x-4 transition-transform duration-500">BOOKING</span>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="block w-full bg-rosso-corsa text-ink-white py-md text-center font-button-label text-button-label uppercase tracking-[2px] hover:bg-rosso-active transition-colors" href="/booking/">
+                INQUIRE NOW
+            </a>
+<div class="mt-xl flex gap-md">
+<a class="text-secondary hover:text-on-surface transition-colors font-caption-upper text-caption-upper" href="#">IG</a>
+<a class="text-secondary hover:text-on-surface transition-colors font-caption-upper text-caption-upper" href="#">BE</a>
+<a class="text-secondary hover:text-on-surface transition-colors font-caption-upper text-caption-upper" href="#">TW</a>
 </div>
 </div>
 </div>
