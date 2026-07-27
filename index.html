@@ -239,9 +239,16 @@
            footer) looks clipped until an extra scroll gesture forces a
            repaint. Promoting these elements to their own GPU compositing
            layer works around it. */
-        #main-nav, #side-drawer, #drawer-overlay {
+        #main-nav, #drawer-overlay {
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
+            will-change: transform;
+        }
+        /* #side-drawer's open/close state is driven by Tailwind's
+           translate-x-full utility, which also sets `transform` — forcing
+           translateZ(0) here would fight that and leave the drawer stuck
+           open. will-change alone is enough of a compositing hint. */
+        #side-drawer {
             will-change: transform;
         }
 
