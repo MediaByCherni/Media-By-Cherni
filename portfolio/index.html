@@ -476,8 +476,14 @@
         // and scroll states. ResizeObserver alone can lag behind the nav's
         // 0.6s height transition, so also resync on transitionend.
         function syncMainOffset() {
-            if (pageMain) pageMain.style.paddingTop = nav.offsetHeight + 'px';
-            if (filterBar) filterBar.style.top = nav.offsetHeight + 'px';
+            // getBoundingClientRect() gives the nav's true (fractional)
+            // rendered height; offsetHeight rounds to the nearest integer,
+            // which can leave a sub-pixel gap between the nav and the
+            // sticky filter bar. Round up so the filter bar never sits
+            // below the nav's real bottom edge.
+            const navHeight = Math.ceil(nav.getBoundingClientRect().height);
+            if (pageMain) pageMain.style.paddingTop = navHeight + 'px';
+            if (filterBar) filterBar.style.top = navHeight + 'px';
         }
         new ResizeObserver(syncMainOffset).observe(nav);
         nav.addEventListener('transitionend', syncMainOffset);
