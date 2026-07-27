@@ -316,7 +316,7 @@
 </div>
 </div>
 </nav>
-<main class="pt-[160px] md:pt-[260px]">
+<main class="pt-[76px] md:pt-[260px]" id="page-main">
 <!-- Hero Section -->
 <section class="relative h-[85vh] md:h-[90vh] w-full flex items-center justify-center overflow-hidden bg-canvas">
 <div class="absolute inset-0 z-0">
@@ -429,6 +429,7 @@
 <script>
         // Sticky Header & Drawer Logic
         const nav = document.getElementById('main-nav');
+        const pageMain = document.getElementById('page-main');
         const trigger = document.getElementById('menu-trigger');
         const drawer = document.getElementById('side-nav');
         const overlay = document.getElementById('side-nav-overlay');
@@ -463,6 +464,16 @@
 
         // Initialize state on load
         updateNav();
+
+        // Keep main's top offset locked to the header's real rendered height —
+        // the header's height changes (logo/padding size, row vs. stacked
+        // layout) across breakpoints and scroll states, and a fixed pt-[]
+        // guess drifts out of sync and leaves a gap or overlap.
+        function syncMainOffset() {
+            if (pageMain) pageMain.style.paddingTop = nav.offsetHeight + 'px';
+        }
+        new ResizeObserver(syncMainOffset).observe(nav);
+        syncMainOffset();
 
         // Drawer Toggle
         function openDrawer() {
