@@ -293,7 +293,7 @@
 </div>
 </section>
 <!-- Filter Section -->
-<section class="border-y border-hairline bg-canvas py-md sticky top-16 md:top-24 z-40 backdrop-blur-sm">
+<section class="border-y border-hairline bg-canvas py-md sticky z-40 backdrop-blur-sm" id="filter-bar">
 <div class="max-w-max-content-width mx-auto px-xs md:px-md flex flex-wrap justify-between items-center gap-md">
 <div class="flex gap-md overflow-x-auto pb-2 md:pb-0 scrollbar-hide" id="portfolio-tabs">
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 pb-1 transition-all text-rosso-corsa border-rosso-corsa" data-category="all">ALL</button>
@@ -443,6 +443,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         const nav = document.getElementById('main-nav');
         const pageMain = document.getElementById('page-main');
+        const filterBar = document.getElementById('filter-bar');
         const openDrawerBtn = document.getElementById('open-drawer');
         const closeDrawerBtn = document.getElementById('close-drawer');
         const sideDrawer = document.getElementById('side-drawer');
@@ -470,11 +471,16 @@
         updateNav();
         window.addEventListener('resize', updateNav);
 
-        // Keep main's top offset locked to the header's real rendered height
+        // Keep main's top offset (and the sticky filter bar) locked to the
+        // header's real rendered height, which changes across breakpoints
+        // and scroll states. ResizeObserver alone can lag behind the nav's
+        // 0.6s height transition, so also resync on transitionend.
         function syncMainOffset() {
             if (pageMain) pageMain.style.paddingTop = nav.offsetHeight + 'px';
+            if (filterBar) filterBar.style.top = nav.offsetHeight + 'px';
         }
         new ResizeObserver(syncMainOffset).observe(nav);
+        nav.addEventListener('transitionend', syncMainOffset);
         syncMainOffset();
 
         // Drawer Operations
