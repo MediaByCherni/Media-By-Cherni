@@ -1,124 +1,266 @@
-<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>About Me</title><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed": "#d2e4ff",
-                    "on-secondary-fixed-variant": "#474746",
-                    "rosso-active": "#B01E0A",
-                    "surface-dim": "#121414",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "hairline": "#303030",
-                    "tertiary": "#a1c9ff",
-                    "surface-container-highest": "#343535",
-                    "secondary-fixed-dim": "#c8c6c5",
-                    "tertiary-fixed-dim": "#a1c9ff",
-                    "surface-container-high": "#292a2a",
-                    "ink-white": "#FFFFFF",
-                    "outline-variant": "#5c403b",
-                    "outline": "#ac8883",
-                    "on-secondary-container": "#b7b4b4",
-                    "secondary": "#c8c6c5",
-                    "primary-container": "#da291c",
-                    "on-surface": "#e3e2e2",
-                    "surface-variant": "#343535",
-                    "secondary-container": "#474746",
-                    "background": "#121414",
-                    "on-error-container": "#ffdad6",
-                    "error-container": "#93000a",
-                    "on-tertiary-fixed": "#001c37",
-                    "canvas-elevated": "#303030",
-                    "on-primary-container": "#fff5f3",
-                    "on-tertiary-container": "#f5f7ff",
-                    "error": "#ffb4ab",
-                    "surface-container-low": "#1a1c1c",
-                    "rosso-corsa": "#DA291C",
-                    "inverse-primary": "#be0f09",
-                    "surface-container-lowest": "#0d0e0f",
-                    "on-primary-fixed-variant": "#930001",
-                    "on-tertiary-fixed-variant": "#004880",
-                    "surface-container": "#1f2020",
-                    "inverse-on-surface": "#2f3131",
-                    "tertiary-container": "#0074c8",
-                    "canvas": "#181818",
-                    "on-secondary": "#313030",
-                    "on-surface-variant": "#e6bdb7",
-                    "secondary-fixed": "#e5e2e1",
-                    "on-tertiary": "#00325a",
-                    "inverse-surface": "#e3e2e2",
-                    "on-background": "#e3e2e2",
-                    "primary-fixed": "#ffdad4",
-                    "surface": "#121414",
-                    "on-error": "#690005",
-                    "surface-tint": "#ffb4a8",
-                    "surface-bright": "#383939",
-                    "primary-fixed-dim": "#ffb4a8",
-                    "primary": "#ffb4a8",
-                    "on-primary-fixed": "#410000",
-                    "on-primary": "#690000"
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>About Me</title><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#d2e4ff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "rosso-active": "#B01E0A",
+                        "surface-dim": "#121414",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "hairline": "#303030",
+                        "tertiary": "#a1c9ff",
+                        "surface-container-highest": "#343535",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "tertiary-fixed-dim": "#a1c9ff",
+                        "surface-container-high": "#292a2a",
+                        "ink-white": "#FFFFFF",
+                        "outline-variant": "#5c403b",
+                        "outline": "#ac8883",
+                        "on-secondary-container": "#b7b4b4",
+                        "secondary": "#c8c6c5",
+                        "primary-container": "#da291c",
+                        "on-surface": "#e3e2e2",
+                        "surface-variant": "#343535",
+                        "secondary-container": "#474746",
+                        "background": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#001c37",
+                        "canvas-elevated": "#303030",
+                        "on-primary-container": "#fff5f3",
+                        "on-tertiary-container": "#f5f7ff",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1a1c1c",
+                        "rosso-corsa": "#DA291C",
+                        "inverse-primary": "#be0f09",
+                        "surface-container-lowest": "#0d0e0f",
+                        "on-primary-fixed-variant": "#930001",
+                        "on-tertiary-fixed-variant": "#004880",
+                        "surface-container": "#1f2020",
+                        "inverse-on-surface": "#2f3131",
+                        "tertiary-container": "#0074c8",
+                        "canvas": "#181818",
+                        "on-secondary": "#313030",
+                        "on-surface-variant": "#e6bdb7",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary": "#00325a",
+                        "inverse-surface": "#e3e2e2",
+                        "on-background": "#e3e2e2",
+                        "primary-fixed": "#ffdad4",
+                        "surface": "#121414",
+                        "on-error": "#690005",
+                        "surface-tint": "#ffb4a8",
+                        "surface-bright": "#383939",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "primary": "#ffb4a8",
+                        "on-primary-fixed": "#410000",
+                        "on-primary": "#690000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "4rem",
+                        "sm": "1.5rem",
+                        "xxl": "6rem",
+                        "super": "8rem",
+                        "xxs": "0.5rem",
+                        "max-content-width": "1280px",
+                        "md": "2rem",
+                        "lg": "3rem",
+                        "xs": "1rem"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["Hanken Grotesk"],
+                        "display-mega-mobile": ["Hanken Grotesk"],
+                        "button-label": ["Hanken Grotesk"],
+                        "display-mega": ["Hanken Grotesk"],
+                        "title-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "caption-upper": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.65px", "fontWeight": "600"}],
+                        "display-mega-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.5px", "fontWeight": "500"}],
+                        "button-label": ["14px", {"lineHeight": "1.0", "letterSpacing": "1.4px", "fontWeight": "700"}],
+                        "display-mega": ["80px", {"lineHeight": "1.05", "letterSpacing": "-1.6px", "fontWeight": "500"}],
+                        "title-md": ["18px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700"}],
+                        "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.36px", "fontWeight": "500"}],
+                        "caption-upper": ["11px", {"lineHeight": "1.4", "letterSpacing": "1.1px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "xl": "4rem",
-                    "sm": "1.5rem",
-                    "xxl": "6rem",
-                    "super": "8rem",
-                    "xxs": "0.5rem",
-                    "max-content-width": "1280px",
-                    "md": "2rem",
-                    "lg": "3rem",
-                    "xs": "1rem"
-            },
-            "fontFamily": {
-                    "nav-link": ["Hanken Grotesk"],
-                    "display-mega-mobile": ["Hanken Grotesk"],
-                    "button-label": ["Hanken Grotesk"],
-                    "display-mega": ["Hanken Grotesk"],
-                    "title-md": ["Hanken Grotesk"],
-                    "display-lg": ["Hanken Grotesk"],
-                    "caption-upper": ["Hanken Grotesk"],
-                    "body-md": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                    "nav-link": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.65px", "fontWeight": "600"}],
-                    "display-mega-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.5px", "fontWeight": "500"}],
-                    "button-label": ["14px", {"lineHeight": "1.0", "letterSpacing": "1.4px", "fontWeight": "700"}],
-                    "display-mega": ["80px", {"lineHeight": "1.05", "letterSpacing": "-1.6px", "fontWeight": "500"}],
-                    "title-md": ["18px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "700"}],
-                    "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.36px", "fontWeight": "500"}],
-                    "caption-upper": ["11px", {"lineHeight": "1.4", "letterSpacing": "1.1px", "fontWeight": "600"}],
-                    "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}]
+        }
+    }catch(_e){}</script><style>
+        nav {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #nav-content-container {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .logo-wrapper, .brand-wrapper {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav .logo-img {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav .brand-name {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Scrolled State */
+        .nav-scrolled {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+            background-color: rgba(18, 20, 20, 0.98) !important;
+        }
+        .nav-scrolled #nav-content-container {
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            gap: 1rem !important;
+        }
+        .nav-scrolled .logo-wrapper {
+            margin: 0 !important;
+        }
+        .nav-scrolled .logo-img {
+            height: 32px !important;
+        }
+        .nav-scrolled .brand-wrapper {
+            margin-right: auto !important;
+        }
+        .nav-scrolled .brand-name {
+            font-size: 1.125rem !important;
+            text-align: left !important;
+        }
+        .nav-scrolled .desktop-links {
+            display: none !important;
+        }
+        .nav-scrolled #open-drawer {
+            display: flex !important;
+        }
+
+        /* Mobile specific header behavior */
+        @media (max-width: 767px) {
+            nav {
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
             }
-          },
-        },
-      }
-    }catch(_e){}</script><link href="/favicon.png" rel="icon" type="image/png"></head><body class="font-body-md overflow-x-hidden">
-<div class="noise-overlay"></div>
-<!-- Navigation Bar -->
-<nav class="fixed top-0 w-full h-16 bg-canvas/80 dark:bg-canvas/80 border-b border-hairline backdrop-blur-md z-50 transition-all duration-300">
-<div class="flex justify-between items-center px-xs md:px-md max-w-max-content-width mx-auto w-full h-full">
-<div class="font-display-lg text-display-lg font-medium text-on-surface tracking-[-0.36px]"><a href=" /" class="hover:text-rosso-corsa transition-colors">MEDIA BY CHERNI</a></div>
-<div class="hidden md:flex gap-lg items-center">
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="/portfolio/">PORTFOLIO</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-rosso-corsa font-bold border-b-2 border-rosso-corsa pb-1" href="/about/">ABOUT ME</a>
-<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors duration-300" href="/booking/">BOOKING</a>
+            #nav-content-container {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 0.75rem !important;
+            }
+            .logo-img {
+                height: 32px !important;
+            }
+            .brand-name {
+                font-size: 0.875rem !important;
+                text-align: left !important;
+                letter-spacing: 0.05em !important;
+            }
+            .desktop-links {
+                display: none !important;
+            }
+            #open-drawer {
+                display: flex !important;
+            }
+        }
+
+        .drawer-transition { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .overlay-transition { transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .media-placeholder {
+            border: 1px dashed var(--tw-border-opacity, #303030);
+        }
+    </style><link href="/favicon.png" rel="icon" type="image/png"/></head><body class="font-body-md overflow-x-hidden bg-background text-on-surface">
+<!-- Navigation Drawer Overlay -->
+<div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] opacity-0 pointer-events-none overlay-transition" id="drawer-overlay"></div>
+<!-- Side Navigation Drawer -->
+<div class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-canvas border-l border-hairline z-[70] translate-x-full drawer-transition" id="side-drawer">
+<div class="flex flex-col h-full p-md md:p-xl">
+<div class="flex justify-between items-center mb-xxl">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa tracking-[2px]">NAVIGATION</span>
+<button class="text-on-surface hover:text-rosso-corsa transition-colors" id="close-drawer">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
 </div>
-<a href="/booking/" class="bg-rosso-corsa text-ink-white font-button-label text-button-label px-md py-3 hover:bg-rosso-active transition-all active:scale-95 inline-flex items-center">
-                INQUIRE
+<nav class="flex flex-col gap-lg">
+<a class="group flex items-baseline gap-md" href="/">
+<span class="font-caption-upper text-caption-upper text-secondary group-hover:text-rosso-corsa transition-colors">01</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase group-hover:translate-x-4 transition-transform duration-500">HOME</span>
+</a>
+<a class="group flex items-baseline gap-md" href="/portfolio/">
+<span class="font-caption-upper text-caption-upper text-secondary group-hover:text-rosso-corsa transition-colors">02</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase group-hover:translate-x-4 transition-transform duration-500">PORTFOLIO</span>
+</a>
+<a class="group flex items-baseline gap-md" href="/about/">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">03</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase text-rosso-corsa">ABOUT ME</span>
+</a>
+<a class="group flex items-baseline gap-md" href="/booking/">
+<span class="font-caption-upper text-caption-upper text-secondary group-hover:text-rosso-corsa transition-colors">04</span>
+<span class="font-display-mega text-display-lg md:text-[48px] uppercase group-hover:translate-x-4 transition-transform duration-500">BOOKING</span>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="block w-full bg-rosso-corsa text-ink-white py-md text-center font-button-label text-button-label uppercase tracking-[2px] hover:bg-rosso-active transition-colors" href="/booking/">
+                INQUIRE NOW
             </a>
+<div class="mt-xl flex gap-md">
+<a class="text-secondary hover:text-on-surface transition-colors font-caption-upper text-caption-upper" href="#">IG</a>
+<a class="text-secondary hover:text-on-surface transition-colors font-caption-upper text-caption-upper" href="#">BE</a>
+<a class="text-secondary hover:text-on-surface transition-colors font-caption-upper text-caption-upper" href="#">TW</a>
+</div>
+</div>
+</div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-auto py-md z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-hairline" id="main-nav">
+<div class="px-md max-w-max-content-width mx-auto">
+<div class="flex flex-col items-center w-full gap-sm transition-all duration-500" id="nav-content-container">
+<!-- Tier 1: Logo -->
+<div class="logo-wrapper flex justify-center shrink-0">
+<a class="block" href="/">
+<img alt="mbc-logo-white" class="logo-img h-[48px] md:h-[72px] w-auto" src="https://i.postimg.cc/HcL6SzCG/mbc-logo-white.png"/>
+</a>
+</div>
+<!-- Tier 2: Brand Name -->
+<div class="brand-wrapper text-center overflow-hidden">
+<a class="brand-name font-display-lg text-display-lg font-bold tracking-tighter text-on-surface uppercase hover:text-rosso-corsa transition-colors block whitespace-nowrap" href="/">MEDIA BY CHERNI</a>
+</div>
+<!-- Tier 3: Desktop Navigation -->
+<div class="desktop-links flex flex-wrap items-center justify-center gap-lg">
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="/portfolio/">PORTFOLIO</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] transition-colors text-rosso-corsa" href="/about/">ABOUT ME</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="/booking/">BOOKING</a>
+<a class="bg-rosso-corsa text-ink-white px-md py-xxs font-button-label text-button-label uppercase tracking-[1.4px] hover:bg-rosso-active transition-all active:scale-95 ml-md inline-block" href="/booking">
+                        INQUIRE
+                    </a>
+</div>
+<!-- Menu Trigger (Always visible on mobile or scrolled header) -->
+<button aria-label="Open menu" class="hidden items-center justify-center p-xxs text-on-surface hover:text-rosso-corsa transition-colors" id="open-drawer">
+<span class="material-symbols-outlined text-3xl md:text-4xl">menu</span>
+</button>
+</div>
 </div>
 </nav>
-<main class="pt-16">
+<main class="pt-[76px] md:pt-[260px]" id="page-main">
 <!-- Hero Section -->
-<section class="relative w-full h-[921px] flex flex-col justify-center overflow-hidden border-b border-hairline bg-surface-container-lowest">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A cinematic, low-angle professional portrait of a creative director standing next to a sleek, dark supercar. The lighting is dramatic and high-contrast, with deep shadows and sharp highlights reflecting off the vehicle's metallic surface. The setting is a minimalist, near-black industrial studio with Rosso Corsa red light accents piercing through the darkness. The aesthetic is authoritative and luxury-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk9b24jg9g3sisVj_vriPQDc8VAqM9RoS4e-w5njm9E5-fVoAjndiAQzY6kJzL67U5WYzl1pIF1jnvfKAWaTpWdE6EAkwBQ1Mve5UEfh_qXuzEOt4DUw6kNw6UXcg1KhXmtQ7_9H8XpbskP-EZgWDQbtqjheKCqLPMvpJVvDv8H9R4bqsPYwUllaPKKBKkd-46oM2CpRphJCfmAKHJGQHdgKWXfvnlCVnhHakMEjZeTQ-yFn7FZUdq">
+<section class="relative w-full h-[600px] md:h-[700px] flex flex-col justify-center overflow-hidden border-b border-hairline bg-surface-container-lowest">
+<div class="absolute inset-0 z-0 media-placeholder flex flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-6xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add your hero portrait here</span>
+<span class="font-caption-upper text-caption-upper text-secondary/60">Recommended: full-bleed, 16:9 or taller</span>
 </div>
 <div class="relative z-10 max-w-max-content-width mx-auto px-xs md:px-md w-full">
 <div class="max-w-3xl">
@@ -129,20 +271,59 @@
 </div>
 </section>
 <!-- Narrative Section -->
-
-<!-- Technical Specification Section (Bento Grid) -->
-
-<!-- Spec Sheet Style List -->
-
-<!-- Final CTA/Portrait -->
-<section class="relative h-[716px] w-full overflow-hidden flex items-center justify-center">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A dark and moody architectural shot of a modern photography studio with a clean black floor and a single spotlight hitting a vintage sports car engine. The scene is filled with subtle atmospheric smoke or haze, catching the beams of light. The composition is minimalist and powerful, echoing the precision-engineered luxury of high-end automotive design. Rosso Corsa red accents highlight technical details of the machinery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgjSnYcwLpDKcM4kDlLowGW8H6eXDbVk5pnwerfN5Ei9GaGqkHm_110c2c7PGg04NpEWSKH9MHh5vQwlRTHQ0iJ_srxz29Kpx614R1CtbQyhP9JhyO7X8bmBOP6SuRreCyaR9V000DyzKxbF2s336bDi-Y5VFcq-QcFF1DOxxXxItB0SIOYBzuj4nuPuKL1J416tzSES0ySn7pllybYyK_HkfCyw7_En2v5k5GQ27HBscecaMDNciG">
-<div class="absolute inset-0 bg-background/80"></div>
+<section class="max-w-max-content-width mx-auto px-xs md:px-md py-xxl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+<div class="lg:col-span-5">
+<div class="aspect-[4/5] media-placeholder flex flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add a portrait or behind-the-scenes photo</span>
 </div>
+</div>
+<div class="lg:col-span-7">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa mb-xs block">THE STORY</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-md">YOUR BIO GOES HERE</h2>
+<p class="font-body-md text-body-md text-secondary mb-sm">
+                        [Placeholder] Write a few paragraphs about how you got started, what draws you to automotive and editorial photography, and the philosophy behind your work. Replace this text with your own story.
+                    </p>
+<p class="font-body-md text-body-md text-secondary">
+                        [Placeholder] A second paragraph works well for describing your process, the clients or brands you've worked with, or what a client can expect when they book a session with you.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Highlights / Specs Section -->
+<section class="border-y border-hairline bg-canvas py-xxl">
+<div class="max-w-max-content-width mx-auto px-xs md:px-md">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md md:gap-lg">
+<div class="border-t border-hairline pt-md">
+<div class="font-display-lg text-display-lg text-rosso-corsa mb-1">00</div>
+<div class="font-caption-upper text-caption-upper text-secondary uppercase tracking-[1.1px]">Years Behind the Lens</div>
+</div>
+<div class="border-t border-hairline pt-md">
+<div class="font-display-lg text-display-lg text-rosso-corsa mb-1">00</div>
+<div class="font-caption-upper text-caption-upper text-secondary uppercase tracking-[1.1px]">Projects Completed</div>
+</div>
+<div class="border-t border-hairline pt-md">
+<div class="font-display-lg text-display-lg text-rosso-corsa mb-1">00</div>
+<div class="font-caption-upper text-caption-upper text-secondary uppercase tracking-[1.1px]">Clients Served</div>
+</div>
+<div class="border-t border-hairline pt-md">
+<div class="font-display-lg text-display-lg text-rosso-corsa mb-1">00</div>
+<div class="font-caption-upper text-caption-upper text-secondary uppercase tracking-[1.1px]">Signature Style</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA/Portrait -->
+<section class="relative h-[500px] md:h-[600px] w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0 media-placeholder flex flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-6xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add a closing background photo here</span>
+</div>
+<div class="absolute inset-0 bg-background/60 z-[1]"></div>
 <div class="relative z-10 text-center max-w-2xl px-xs">
 <h2 class="font-display-lg text-display-lg text-ink-white mb-md">LET'S CAPTURE THE SOUL OF YOUR MACHINE.</h2>
-<a href="/booking/" class="bg-rosso-corsa text-ink-white font-button-label text-button-label px-xl py-4 hover:bg-rosso-active transition-all tracking-[2px] inline-flex items-center gap-sm">
+<a class="bg-rosso-corsa text-ink-white font-button-label text-button-label px-xl py-4 hover:bg-rosso-active transition-all tracking-[2px] inline-flex items-center gap-sm" href="/booking/">
                     BOOK A SESSION
                     <span class="material-symbols-outlined">arrow_forward</span>
 </a>
@@ -150,55 +331,84 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-canvas border-t border-hairline">
-<div class="flex flex-col md:flex-row justify-between items-center px-xs md:px-md max-w-max-content-width mx-auto w-full py-lg gap-xs">
-<div class="font-display-lg text-display-lg text-on-surface"><a href=" /" class="hover:text-rosso-corsa transition-colors">MBC</a></div>
-<div class="flex gap-md">
+<footer class="bg-canvas border-t border-hairline w-full py-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-xs md:px-md max-w-max-content-width mx-auto w-full gap-xs">
+<a class="font-display-lg text-display-lg text-on-surface mb-sm md:mb-0 hover:opacity-80 transition-opacity uppercase" href="/">
+                MEDIA BY CHERNI
+            </a>
+<div class="flex flex-col items-center md:items-end gap-xs">
+<div class="flex gap-md mb-xs">
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant hover:text-rosso-corsa transition-colors" href="https://www.instagram.com/mediabycherni">INSTAGRAM</a>
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant hover:text-rosso-corsa transition-colors" href="#">BEHANCE</a>
 <a class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant hover:text-rosso-corsa transition-colors" href="#">TWITTER</a>
 </div>
-<div class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant">
-                © 2024 MEDIA BY CHERNI. ALL RIGHTS RESERVED.
-            </div>
+<p class="font-caption-upper text-caption-upper uppercase tracking-[1.1px] text-on-surface-variant">
+                    © 2024 MEDIA BY CHERNI. ALL RIGHTS RESERVED.
+                </p>
+</div>
 </div>
 </footer>
 <script>
-        // Micro-interactions and reveals
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1
-            };
+    document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.getElementById('main-nav');
+        const pageMain = document.getElementById('page-main');
+        const openDrawerBtn = document.getElementById('open-drawer');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const sideDrawer = document.getElementById('side-drawer');
+        const drawerOverlay = document.getElementById('drawer-overlay');
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        if(entry.target.dataset.revealType === 'text') {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.image-reveal').forEach(el => observer.observe(el));
-            
-            // Header scroll effect
-            window.addEventListener('scroll', () => {
-                const nav = document.querySelector('nav');
-                if (window.scrollY > 50) {
-                    nav.classList.add('h-14');
-                    nav.classList.remove('h-16');
-                    nav.classList.add('bg-canvas/95');
-                } else {
-                    nav.classList.add('h-16');
-                    nav.classList.remove('h-14');
-                    nav.classList.remove('bg-canvas/95');
-                }
-            });
+        // Sticky Header Scroll Handling
+        let ticking = false;
+        function updateNav() {
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else if (window.innerWidth >= 768) {
+                nav.classList.remove('nav-scrolled');
+            } else {
+                // Mobile always behaves like "scrolled" for layout simplicity
+                nav.classList.add('nav-scrolled');
+            }
+            ticking = false;
+        }
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateNav);
+                ticking = true;
+            }
         });
-    </script>
+        window.addEventListener('resize', updateNav);
 
+        // Keep main's top offset locked to the header's real rendered
+        // height, which changes across breakpoints and scroll states.
+        function syncMainOffset() {
+            if (pageMain) pageMain.style.paddingTop = nav.offsetHeight + 'px';
+        }
+        new ResizeObserver(syncMainOffset).observe(nav);
+        nav.addEventListener('transitionend', syncMainOffset);
+        updateNav();
+        syncMainOffset();
 
+        // Drawer Operations
+        const openDrawer = () => {
+            sideDrawer.classList.remove('translate-x-full');
+            drawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeDrawer = () => {
+            sideDrawer.classList.add('translate-x-full');
+            drawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        openDrawerBtn.addEventListener('click', openDrawer);
+        closeDrawerBtn.addEventListener('click', closeDrawer);
+        drawerOverlay.addEventListener('click', closeDrawer);
+
+        // Escape key to close drawer
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDrawer();
+        });
+    });
+</script>
 </body></html>
