@@ -202,17 +202,7 @@
         #side-drawer {
             will-change: transform;
         }
-    
-        /* Disable the rubber-band overscroll bounce at the top/bottom of
-           the page. Combined with the fixed, backdrop-blurred nav, that
-           bounce can trigger an iOS Safari repaint glitch where content
-           near the page edges (e.g. the footer) looks clipped or shows a
-           blank strip until an extra scroll gesture forces a repaint.
-           Removing the bounce removes the trigger entirely. */
-        html, body {
-            overscroll-behavior-y: none;
-        }
-</style><link href="/favicon.png" rel="icon" type="image/png"/></head><body class="font-body-md overflow-x-hidden bg-background text-on-surface">
+    </style><link href="/favicon.png" rel="icon" type="image/png"/></head><body class="font-body-md overflow-x-hidden bg-background text-on-surface">
 <!-- Navigation Drawer Overlay -->
 <div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] opacity-0 pointer-events-none overlay-transition" id="drawer-overlay"></div>
 <!-- Side Navigation Drawer -->
