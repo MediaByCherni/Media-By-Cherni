@@ -182,12 +182,25 @@
         .media-placeholder {
             border: 1px dashed var(--tw-border-opacity, #303030);
         }
+
+        /* iOS Safari can fail to repaint content beneath a `position: fixed`
+           element that also has `backdrop-filter` (our blurred nav/drawer/
+           overlay), especially during the rubber-band overscroll bounce at
+           the top or bottom of the page — the tail end of the page (e.g. the
+           footer) looks clipped until an extra scroll gesture forces a
+           repaint. Promoting these elements to their own GPU compositing
+           layer works around it. */
+        #main-nav, #side-drawer, #drawer-overlay {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            will-change: transform;
+        }
     </style><link href="/favicon.png" rel="icon" type="image/png"/></head><body class="font-body-md overflow-x-hidden bg-background text-on-surface">
 <!-- Navigation Drawer Overlay -->
 <div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] opacity-0 pointer-events-none overlay-transition" id="drawer-overlay"></div>
 <!-- Side Navigation Drawer -->
 <div class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-canvas border-l border-hairline z-[70] translate-x-full drawer-transition" id="side-drawer">
-<div class="flex flex-col h-full p-md md:p-xl">
+<div class="flex flex-col h-full p-md md:p-xl overflow-y-auto">
 <div class="flex justify-between items-center mb-xxl">
 <span class="font-caption-upper text-caption-upper text-rosso-corsa tracking-[2px]">NAVIGATION</span>
 <button class="text-on-surface hover:text-rosso-corsa transition-colors" id="close-drawer">
