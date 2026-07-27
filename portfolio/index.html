@@ -101,12 +101,84 @@
             },
         }
     }catch(_e){}</script><style>
-        .header-transition { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-        .logo-transition { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        nav {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #nav-content-container {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .logo-wrapper, .brand-wrapper {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav .logo-img {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav .brand-name {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Scrolled State */
+        .nav-scrolled {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+            background-color: rgba(18, 20, 20, 0.98) !important;
+        }
+        .nav-scrolled #nav-content-container {
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            gap: 1rem !important;
+        }
+        .nav-scrolled .logo-wrapper {
+            margin: 0 !important;
+        }
+        .nav-scrolled .logo-img {
+            height: 32px !important;
+        }
+        .nav-scrolled .brand-wrapper {
+            margin-right: auto !important;
+        }
+        .nav-scrolled .brand-name {
+            font-size: 1.125rem !important;
+            text-align: left !important;
+        }
+        .nav-scrolled .desktop-links {
+            display: none !important;
+        }
+        .nav-scrolled #open-drawer {
+            display: flex !important;
+        }
+
+        /* Mobile specific header behavior */
+        @media (max-width: 767px) {
+            nav {
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+            }
+            #nav-content-container {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 0.75rem !important;
+            }
+            .logo-img {
+                height: 32px !important;
+            }
+            .brand-name {
+                font-size: 0.875rem !important;
+                text-align: left !important;
+                letter-spacing: 0.05em !important;
+            }
+            .desktop-links {
+                display: none !important;
+            }
+            #open-drawer {
+                display: flex !important;
+            }
+        }
+
         .drawer-transition { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .overlay-transition { transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-        .scrolled .header-inner { height: 64px; }
-        .scrolled .logo-container { transform: scale(0.85); }
     </style><link href="/favicon.png" rel="icon" type="image/png"/></head><body class="font-body-md overflow-x-hidden bg-background text-on-surface">
 <!-- Navigation Drawer Overlay -->
 <div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] opacity-0 pointer-events-none overlay-transition" id="drawer-overlay"></div>
@@ -149,26 +221,37 @@
 </div>
 </div>
 </div>
-<!-- Dynamic Header -->
-<header class="fixed top-0 w-full z-50 header-transition border-b border-hairline bg-canvas/90 backdrop-blur-md" id="main-header">
-<div class="header-inner max-w-max-content-width mx-auto px-xs md:px-md flex justify-between items-center h-20 md:h-24 header-transition">
-<a class="logo-container flex items-center gap-xs logo-transition" href="/">
-<img  class="w-8 md:w-10 h-auto" src="https://i.postimg.cc/HcL6SzCG/mbc-logo-white.png" alt="mbc-logo-white">
-<span class="font-display-lg text-display-lg tracking-[-1px] font-medium hidden sm:inline">MEDIA BY CHERNI</span>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-auto py-md z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-hairline" id="main-nav">
+<div class="px-md max-w-max-content-width mx-auto">
+<div class="flex flex-col items-center w-full gap-sm transition-all duration-500" id="nav-content-container">
+<!-- Tier 1: Logo -->
+<div class="logo-wrapper flex justify-center shrink-0">
+<a class="block" href="/">
+<img alt="mbc-logo-white" class="logo-img h-[48px] md:h-[72px] w-auto" src="https://i.postimg.cc/HcL6SzCG/mbc-logo-white.png"/>
 </a>
-<div class="flex items-center gap-md">
-<nav class="hidden lg:flex gap-md">
-<a class="font-nav-link text-nav-link uppercase text-rosso-corsa border-b-2 border-rosso-corsa pb-1" href="/portfolio/">PORTFOLIO</a>
-<a class="font-nav-link text-nav-link uppercase text-on-surface hover:text-rosso-corsa transition-colors" href="/about/">ABOUT ME</a>
-<a class="font-nav-link text-nav-link uppercase text-on-surface hover:text-rosso-corsa transition-colors" href="/booking/">BOOKING</a>
-</nav>
-<button class="p-2 hover:text-rosso-corsa transition-colors" id="open-drawer">
-<span class="material-symbols-outlined text-[32px]">menu</span>
+</div>
+<!-- Tier 2: Brand Name -->
+<div class="brand-wrapper text-center overflow-hidden">
+<a class="brand-name font-display-lg text-display-lg font-bold tracking-tighter text-on-surface uppercase hover:text-rosso-corsa transition-colors block whitespace-nowrap" href="/">MEDIA BY CHERNI</a>
+</div>
+<!-- Tier 3: Desktop Navigation -->
+<div class="desktop-links flex flex-wrap items-center justify-center gap-lg">
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] transition-colors text-rosso-corsa" href="/portfolio/">PORTFOLIO</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="/about/">ABOUT ME</a>
+<a class="font-nav-link text-nav-link uppercase tracking-[1.4px] text-on-surface hover:text-rosso-corsa transition-colors" href="/booking/">BOOKING</a>
+<a class="bg-rosso-corsa text-ink-white px-md py-xxs font-button-label text-button-label uppercase tracking-[1.4px] hover:bg-rosso-active transition-all active:scale-95 ml-md inline-block" href="/booking">
+                        INQUIRE
+                    </a>
+</div>
+<!-- Menu Trigger (Always visible on mobile or scrolled header) -->
+<button aria-label="Open menu" class="hidden items-center justify-center p-xxs text-on-surface hover:text-rosso-corsa transition-colors" id="open-drawer">
+<span class="material-symbols-outlined text-3xl md:text-4xl">menu</span>
 </button>
 </div>
 </div>
-</header>
-<main>
+</nav>
+<main class="pt-[76px] md:pt-[260px]" id="page-main">
 <!-- Hero Section -->
 <section class="relative w-full h-[819px] flex items-end overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -307,20 +390,41 @@
 </footer>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const header = document.getElementById('main-header');
+        const nav = document.getElementById('main-nav');
+        const pageMain = document.getElementById('page-main');
         const openDrawerBtn = document.getElementById('open-drawer');
         const closeDrawerBtn = document.getElementById('close-drawer');
         const sideDrawer = document.getElementById('side-drawer');
         const drawerOverlay = document.getElementById('drawer-overlay');
 
-        // Scroll Handling for Header
-        window.addEventListener('scroll', () => {
+        // Sticky Header Scroll Handling
+        let ticking = false;
+        function updateNav() {
             if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+                nav.classList.add('nav-scrolled');
+            } else if (window.innerWidth >= 768) {
+                nav.classList.remove('nav-scrolled');
             } else {
-                header.classList.remove('scrolled');
+                // Mobile always behaves like "scrolled" for layout simplicity
+                nav.classList.add('nav-scrolled');
+            }
+            ticking = false;
+        }
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateNav);
+                ticking = true;
             }
         });
+        updateNav();
+        window.addEventListener('resize', updateNav);
+
+        // Keep main's top offset locked to the header's real rendered height
+        function syncMainOffset() {
+            if (pageMain) pageMain.style.paddingTop = nav.offsetHeight + 'px';
+        }
+        new ResizeObserver(syncMainOffset).observe(nav);
+        syncMainOffset();
 
         // Drawer Operations
         const openDrawer = () => {
