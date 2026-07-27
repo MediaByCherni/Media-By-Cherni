@@ -301,7 +301,7 @@
                         INQUIRE
                     </a>
 </div>
-<!-- Menu Trigger -->
+<!-- Menu Trigger (Always visible on mobile or scrolled header) -->
 <button aria-label="Open menu" class="hidden items-center justify-center p-xxs text-on-surface hover:text-rosso-corsa transition-colors" id="menu-trigger">
 <span class="material-symbols-outlined text-3xl md:text-4xl">menu</span>
 </button>
@@ -340,7 +340,6 @@
 <div class="h-px flex-1 bg-hairline mx-lg hidden lg:block reveal-up"></div>
 <p class="font-body-md text-secondary reveal-up max-w-xs">A selection of recent works focusing on mechanical precision.</p>
 </div>
-<!-- Responsive Grid: 1 col on mobile, 2 on tablet (sm/md), 3 on desktop (lg) -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-xl gap-x-6 md:gap-x-md">
 <!-- Project 1 -->
 <div class="group border-t border-hairline pt-md reveal-up">
@@ -435,9 +434,11 @@
             if (currentScroll > 50) {
                 nav.classList.add('nav-scrolled');
             } else {
-                // Only remove scrolled class if not on mobile (on mobile we always want the simplified view)
                 if (window.innerWidth >= 768) {
                     nav.classList.remove('nav-scrolled');
+                } else {
+                    // Mobile always behaves like "scrolled" for layout simplicity
+                    nav.classList.add('nav-scrolled');
                 }
             }
             ticking = false;
@@ -492,10 +493,6 @@
         // Handle window resize
         window.addEventListener('resize', () => {
             updateNav();
-            if (window.innerWidth >= 768 && !nav.classList.contains('nav-scrolled')) {
-                // If we expand from mobile and we're at the top, drawer should close if it was open
-                // (Optional: depending on desired UX)
-            }
         });
     </script>
 </body></html>
