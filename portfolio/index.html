@@ -312,21 +312,21 @@
 </div>
 </section>
 <!-- Portfolio Grid -->
-<!-- Each tile is a project with its own 3-image carousel. Slide 1 is the
-     grid cover (visible); slides 2-3 only ever appear in the lightbox.
-     To add a photo, replace the matching .carousel-slide <div> with:
-       Slide 1 (cover):  <img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="photo1.jpg" alt="...">
-       Slide 2 or 3:     <img class="carousel-slide hidden" src="photo2.jpg" alt="...">
-     No forced aspect-ratio/cropping on the cover <img> — the tile's height
-     follows that photo's natural proportions once added. -->
+<!-- Each tile is a project with its own 3-image carousel: three <img> tags
+     with class="carousel-slide", each with an empty src="" for now. Slide 1
+     (no "hidden" class) is the grid cover; slides 2-3 (class="hidden") only
+     ever appear in that project's lightbox. To add a photo, just fill in
+     the matching <img>'s src (and alt) — no other markup to change. The
+     cover <img> has no forced aspect-ratio/cropping, so the tile's height
+     follows that photo's natural proportions once its src is set. -->
 <section class="max-w-max-content-width mx-auto px-xs md:px-md py-xxl">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg" id="portfolio-grid">
 <!-- Project 1: Automotive -->
 <div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="LEGACY IN ROSSO" data-caption="CLASSIC RACING / EDITORIAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[3/2] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
@@ -340,9 +340,9 @@
 <!-- Project 2: Automotive -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="KINETIC DETAIL" data-caption="TECHNICAL / MACRO">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[4/5] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -355,9 +355,9 @@
 <!-- Project 3: Automotive -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="SYMMETRY OPS" data-caption="STUDIO / COMMERCIAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-square flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -370,9 +370,9 @@
 <!-- Project 4: Portraits -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="THE DRIVER'S SOUL" data-caption="HUMAN INTEREST / DOCU">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[2/3] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -385,9 +385,9 @@
 <!-- Project 5: Portraits -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="URBAN PULSE" data-caption="STREET / EDITORIAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[16/9] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
@@ -401,9 +401,9 @@
 <!-- Project 6: Landscape -->
 <div class="md:col-span-12 group portfolio-card gallery-item cursor-pointer mt-md" data-category="landscape" data-title="PEAK PERFORMANCE" data-caption="ADVERTISING / LANDSCAPE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[21/9] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -416,9 +416,9 @@
 <!-- Project 7: Landscape -->
 <div class="md:col-span-6 group portfolio-card gallery-item cursor-pointer" data-category="landscape" data-title="GOLDEN HOUR" data-caption="TRAVEL / LANDSCAPE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[4/3] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -431,9 +431,9 @@
 <!-- Project 8: Nature -->
 <div class="md:col-span-6 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="ETHEREAL MIST" data-caption="NATURE / ATMOSPHERIC">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[5/4] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
@@ -447,9 +447,9 @@
 <!-- Project 9: Nature -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="VERTICAL LIMIT" data-caption="ADVENTURE / VERTICAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[9/16] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -462,9 +462,9 @@
 <!-- Project 10: Nature -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="SILENT PEAK" data-caption="NATURE / MINIMAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[3/4] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -477,9 +477,9 @@
 <!-- Project 11: Portraits -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="QUIET FRAME" data-caption="MINIMAL / PORTRAIT">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<div class="media-placeholder carousel-slide aspect-[7/5] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span></div>
-<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary"><span class="material-symbols-outlined text-5xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span></div>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
+<img class="carousel-slide hidden" alt="Photo 2"/>
+<img class="carousel-slide hidden" alt="Photo 3"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -677,7 +677,8 @@
             if (!slide) return;
 
             lightboxMediaWrap.innerHTML = '';
-            if (slide.tagName === 'IMG') {
+            const hasPhoto = slide.tagName === 'IMG' && slide.getAttribute('src');
+            if (hasPhoto) {
                 const clone = document.createElement('img');
                 clone.src = slide.currentSrc || slide.src;
                 clone.alt = slide.alt || '';
