@@ -181,6 +181,9 @@
         .overlay-transition { transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .media-placeholder {
+            border: 1px dashed #303030;
+        }
 
         /* iOS Safari can fail to repaint content beneath a `position: fixed`
            element that also has `backdrop-filter` (our blurred nav/drawer/
@@ -309,13 +312,31 @@
 </div>
 </section>
 <!-- Portfolio Grid -->
+<!-- Each tile is a project with its own 3-image carousel. Slide 1 is the
+     grid cover (visible); slides 2-3 only ever appear in the lightbox.
+     To add a photo, replace the matching .carousel-slide <div> with:
+       Slide 1 (cover):  <img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="photo1.jpg" alt="...">
+       Slide 2 or 3:     <img class="carousel-slide hidden" src="photo2.jpg" alt="...">
+     No forced aspect-ratio/cropping on the cover <img> — the tile's height
+     follows that photo's natural proportions once added. -->
 <section class="max-w-max-content-width mx-auto px-xs md:px-md py-xxl">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg" id="portfolio-grid">
 <!-- Project 1: Automotive -->
-<div class="md:col-span-8 group portfolio-card visible" data-category="automotive">
-<div class="overflow-hidden bg-canvas-elevated aspect-[16/9] mb-sm cursor-pointer relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Legacy in Rosso" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMQ-mLzoPkUVK_ALGk763SPnNCQxjPhxib_VhgmYZhhwW62OMJyMcC-1wFOtXvALZH7lN4fCeeeoxXrJiPl_keHavj2emt9xVjdktohXQLkosqBKDBj-NYClSd3wUFrDzLL-SwuU7YVd0AtdOrexdNBmiLhEpJnnpQMvG2WjZOHQrPSqsekDSWn3FBtF9qOld-EsgolPcmdJRkrCcrZmxXYTonDA9biACDA6SIGUCxgQD-Lq3_5Vyi"/>
-<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="LEGACY IN ROSSO" data-caption="CLASSIC RACING / EDITORIAL">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[3/2] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -326,9 +347,20 @@
 </div>
 </div>
 <!-- Project 2: Automotive -->
-<div class="md:col-span-4 group portfolio-card visible" data-category="automotive">
-<div class="overflow-hidden bg-canvas-elevated aspect-[3/4] mb-sm cursor-pointer relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Kinetic Detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCReeQZ_h0_ctpYz3XNImB5OINj9QOSlnLN71mfcUIxbjCIn04jq_IaLT-ebDBBOP_uCUqSGYuJZrcTyAue-qn83xFltoWF_gRw-07uCX90wg9AAqAK60xfHYokjMPDXoweOVWt2HyA3Huh9OSF1IS0tbAn_ef51uG1tAfNTeK8JlYUXuKyyO7Z6wyeKroabueewdGn8V_S1nfneHttK1zi4VbkdeEOyeL6vhfY0hgQDaiv-9-bShXD"/>
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="KINETIC DETAIL" data-caption="TECHNICAL / MACRO">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[4/5] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -338,36 +370,21 @@
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
 </div>
 </div>
-<!-- Project 3: Landscape -->
-<div class="md:col-span-12 group portfolio-card visible mt-md" data-category="landscape">
-<div class="overflow-hidden bg-canvas-elevated aspect-[21/9] mb-sm cursor-pointer relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Peak Performance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAN4P2hpo1TF1PNIAvJaX8krxBnRFYD_hbyaXxIz4NfELcPI2Zjx-4Q0BIilzLc1GBcPOJnJzyVvLaWtbG5joJozC6u6Td7Cct_ZwxxeTmj_AYUJlgKwEGQx487cOpJ96Aax7eMP5c7L0aqTM2hIgmuWvtt4seWcRd9mDJWBn6A67UEBAPFM86Z2cTyMGXYvZNsmcQ-WpmASWzwEoYm9m6R0-pE4-33d_T26INkuBjxttjaa8k_DVp"/>
+<!-- Project 3: Automotive -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="SYMMETRY OPS" data-caption="STUDIO / COMMERCIAL">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-square flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
 </div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PEAK PERFORMANCE</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">ADVERTISING / LANDSCAPE</p>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
 </div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
 </div>
-</div>
-<!-- Project 4: Portraits -->
-<div class="md:col-span-6 group portfolio-card visible" data-category="portraits">
-<div class="overflow-hidden bg-canvas-elevated aspect-square mb-sm cursor-pointer relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="The Driver's Soul" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAq2vu0ixn6PVcTu6BQZXGf0q7IDcjkETEQNPFSxOJv1XFx-I6zGZw7zfUUkrncqaduOYSfCAksW5irzdfvCWGCGd7V0nFOYH3ZNMKUU4P1v_gEcDv-e-7li8MoTj_pu1725K8l1aKRGVlOvo2xgJIRnlOh8ANIS-EkIZb31vM1cg4NnwTzncnh7cSbtOQmBp3trArPSkPi63KR-QgbuXPa30KWGxN3rBQC22qQjiw8gINWJLFetUz"/>
-</div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">THE DRIVER'S SOUL</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">HUMAN INTEREST / DOCU</p>
-</div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
-</div>
-</div>
-<!-- Project 5: Automotive -->
-<div class="md:col-span-6 group portfolio-card visible" data-category="automotive">
-<div class="overflow-hidden bg-canvas-elevated aspect-square mb-sm cursor-pointer relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Symmetry Ops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-XaDVASIIEAOwJnRj6dismW7On4NbQMpVwqfNICgvWdAEgYUfjYRTvaRBXKgCIj3u0zKGxZNnPiToEmwGMCXER2koAeDIILmDBl36RLhdqqNWDGhPRczVWzwvQXKSma-gii6WUYX3IsWLE0_NpL2IAbR4gMz0t04V02c4qymjR95ycMCH97tOIL9pT_dYSocp-GaCTkRizY8427V1vP3W9sufv5bK1aFRA3_T4QNu2vqae4GIQvPt"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -377,11 +394,119 @@
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
 </div>
 </div>
-<!-- Project 6: Nature -->
-<div class="md:col-span-8 group portfolio-card visible" data-category="nature">
-<div class="overflow-hidden bg-canvas-elevated aspect-[16/9] mb-sm cursor-pointer relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Ethereal Mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAMMtYSM6erfyDiAXbuJQ5RI6yszwgNoa4si0Xr4mr3IOjfTWU0qyUjQLx8epz3_639HxZfisVvUPPT1RHbnu7ltB6C-uygGi27bIitxTKzBNAHhbJZwDXxjfWAx8PU85Ns0iD1qB4PoimWXIbXu0nXlr0vpeWk1-Sw2dfWZ5qtToa8pE9PoEm77Uy0letphbHPN4VodMaLovOQLBC4_y6VQC9GxPNUqo7D2n5DumeB0BZlEUpsdA3ulskluj3itADtbrObAYMQdv9"/>
-<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<!-- Project 4: Portraits -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="THE DRIVER'S SOUL" data-caption="HUMAN INTEREST / DOCU">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[2/3] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">THE DRIVER'S SOUL</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">HUMAN INTEREST / DOCU</p>
+</div>
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
+</div>
+</div>
+<!-- Project 5: Portraits -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="URBAN PULSE" data-caption="STREET / EDITORIAL">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[16/9] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">URBAN PULSE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">STREET / EDITORIAL</p>
+</div>
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
+</div>
+</div>
+<!-- Project 6: Landscape -->
+<div class="md:col-span-12 group portfolio-card gallery-item cursor-pointer mt-md" data-category="landscape" data-title="PEAK PERFORMANCE" data-caption="ADVERTISING / LANDSCAPE">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[21/9] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PEAK PERFORMANCE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">ADVERTISING / LANDSCAPE</p>
+</div>
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
+</div>
+</div>
+<!-- Project 7: Landscape -->
+<div class="md:col-span-6 group portfolio-card gallery-item cursor-pointer" data-category="landscape" data-title="GOLDEN HOUR" data-caption="TRAVEL / LANDSCAPE">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[4/3] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">GOLDEN HOUR</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">TRAVEL / LANDSCAPE</p>
+</div>
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
+</div>
+</div>
+<!-- Project 8: Nature -->
+<div class="md:col-span-6 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="ETHEREAL MIST" data-caption="NATURE / ATMOSPHERIC">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[5/4] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -391,15 +516,74 @@
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
 </div>
 </div>
-<!-- Project 7: Nature -->
-<div class="md:col-span-4 group portfolio-card visible" data-category="nature">
-<div class="overflow-hidden bg-canvas-elevated aspect-[3/4] mb-sm cursor-pointer relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Silent Peak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAxBp88m_gn-4w9_4aZ3QmC1n8d1VmlS3VTr17MvciJ8tRo9t6QQjgXClTW27rdRbX5C8Gc3Ev45gEAx0UIyjps-Om3fHxVASL3UqCgQNlAids-Ql9nzbdndOpS3XOmxKhupFDV6nP5eD8jvgeT7osZKqaAylWJcj9cs_AH-bG1xO5-rTnJ-Jq-unsBd8b_M4mj2RMgKBVfc-Jly0Sb17zxIUrOSUzZj4KwzjE1w0PVcLW0vCmOOFuy6SxWAoAGTc4wMHJf4MqIb6k"/>
+<!-- Project 9: Nature -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="VERTICAL LIMIT" data-caption="ADVENTURE / VERTICAL">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[9/16] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">VERTICAL LIMIT</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">ADVENTURE / VERTICAL</p>
+</div>
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
+</div>
+</div>
+<!-- Project 10: Nature -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="SILENT PEAK" data-caption="NATURE / MINIMAL">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[3/4] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
 <h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">SILENT PEAK</h3>
 <p class="font-caption-upper text-caption-upper text-secondary uppercase">NATURE / MINIMAL</p>
+</div>
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
+</div>
+</div>
+<!-- Project 11: Portraits -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="QUIET FRAME" data-caption="MINIMAL / PORTRAIT">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<div class="media-placeholder carousel-slide aspect-[7/5] flex flex-col items-center justify-center gap-sm text-secondary transition-transform duration-1000 group-hover:scale-105">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 1</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 2</span>
+</div>
+<div class="media-placeholder carousel-slide hidden flex-col items-center justify-center gap-sm text-secondary">
+<span class="material-symbols-outlined text-5xl">add_photo_alternate</span>
+<span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">Add Photo 3</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">QUIET FRAME</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">MINIMAL / PORTRAIT</p>
 </div>
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
 </div>
@@ -439,6 +623,26 @@
 </div>
 </div>
 </footer>
+<!-- Lightbox / Carousel -->
+<div class="fixed inset-0 z-[80] bg-background/95 backdrop-blur-md hidden items-center justify-center" id="lightbox">
+<button aria-label="Close" class="absolute top-md right-md md:top-lg md:right-lg text-on-surface hover:text-rosso-corsa transition-colors z-10" id="lightbox-close" type="button">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<button aria-label="Previous image" class="absolute left-xs md:left-lg top-1/2 -translate-y-1/2 text-on-surface hover:text-rosso-corsa transition-colors z-10" id="lightbox-prev" type="button">
+<span class="material-symbols-outlined text-5xl">chevron_left</span>
+</button>
+<button aria-label="Next image" class="absolute right-xs md:right-lg top-1/2 -translate-y-1/2 text-on-surface hover:text-rosso-corsa transition-colors z-10" id="lightbox-next" type="button">
+<span class="material-symbols-outlined text-5xl">chevron_right</span>
+</button>
+<div class="max-w-4xl w-full px-xl md:px-super flex flex-col items-center gap-md">
+<div class="w-full flex items-center justify-center" id="lightbox-media-wrap"></div>
+<div class="text-center">
+<h3 class="font-title-md text-title-md text-on-surface uppercase" id="lightbox-title"></h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase mb-xxs" id="lightbox-caption"></p>
+<span class="font-caption-upper text-caption-upper text-secondary" id="lightbox-counter"></span>
+</div>
+</div>
+</div>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const nav = document.getElementById('main-nav');
@@ -544,6 +748,95 @@
                     card.classList.toggle('hidden', !show);
                 });
             });
+        });
+
+        // Lightbox / Carousel
+        const lightbox = document.getElementById('lightbox');
+        const lightboxMediaWrap = document.getElementById('lightbox-media-wrap');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxCounter = document.getElementById('lightbox-counter');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+
+        // Each gallery item carries its own set of .carousel-slide elements
+        // (a placeholder <div> or, once filled in, an <img>) — the lightbox
+        // cycles through that one project's slides only, not other tiles.
+        let currentItem = null;
+        let currentSlides = [];
+        let lightboxIndex = 0;
+
+        function getSlidesForItem(item) {
+            return Array.from(item.querySelectorAll('.carousel-slide'));
+        }
+
+        function renderLightbox() {
+            const slide = currentSlides[lightboxIndex];
+            if (!slide) return;
+
+            lightboxMediaWrap.innerHTML = '';
+            if (slide.tagName === 'IMG') {
+                const clone = document.createElement('img');
+                clone.src = slide.currentSrc || slide.src;
+                clone.alt = slide.alt || '';
+                clone.className = 'max-h-[75vh] w-auto h-auto object-contain';
+                lightboxMediaWrap.appendChild(clone);
+            } else {
+                const placeholder = document.createElement('div');
+                placeholder.className = 'media-placeholder aspect-[4/3] w-full max-w-lg flex flex-col items-center justify-center gap-sm text-secondary';
+                placeholder.innerHTML = '<span class="material-symbols-outlined text-6xl">add_photo_alternate</span><span class="font-caption-upper text-caption-upper uppercase tracking-[1.1px]">No photo added yet</span>';
+                lightboxMediaWrap.appendChild(placeholder);
+            }
+
+            lightboxTitle.textContent = currentItem.dataset.title || '';
+            lightboxCaption.textContent = currentItem.dataset.caption || '';
+            lightboxCounter.textContent = (lightboxIndex + 1) + ' / ' + currentSlides.length;
+        }
+
+        function openLightbox(item) {
+            currentItem = item;
+            currentSlides = getSlidesForItem(item);
+            lightboxIndex = 0;
+            renderLightbox();
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        function showPrevImage() {
+            if (!currentSlides.length) return;
+            lightboxIndex = (lightboxIndex - 1 + currentSlides.length) % currentSlides.length;
+            renderLightbox();
+        }
+
+        function showNextImage() {
+            if (!currentSlides.length) return;
+            lightboxIndex = (lightboxIndex + 1) % currentSlides.length;
+            renderLightbox();
+        }
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => openLightbox(item));
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', showPrevImage);
+        lightboxNext.addEventListener('click', showNextImage);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'ArrowRight') showNextImage();
         });
     });
 </script>
