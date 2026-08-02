@@ -4,6 +4,8 @@
 <title>MediaByCherni</title>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="preconnect" href="https://i.postimg.cc"/>
+<link rel="dns-prefetch" href="https://i.postimg.cc"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -142,6 +144,33 @@
             transform: scale(1.1);
         }
 
+        /* Skeleton shimmer for the Latest Series tiles while the portfolio
+           feed is being fetched. Keeps the section's height reserved so the
+           page below doesn't jump when the real cards land. */
+        .skeleton-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .skeleton-shimmer::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            transform: translateX(-100%);
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.04) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: skeletonSweep 1.6s ease-in-out infinite;
+        }
+        @keyframes skeletonSweep {
+            100% { transform: translateX(100%); }
+        }
+        .skeleton-bar {
+            background-color: #303030;
+        }
+
         nav {
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -258,6 +287,9 @@
                 animation: none !important;
                 transform: none !important;
             }
+            .skeleton-shimmer::after {
+                animation: none !important;
+            }
         }
     </style>
 </head>
@@ -311,7 +343,7 @@
 <!-- Tier 1: Logo -->
 <div class="logo-wrapper flex justify-center shrink-0">
 <a class="block" href="/">
-<img alt="MBC Logo" class="logo-img h-[48px] md:h-[72px] w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC14B3xIz8ArLGBVrdBDpTKJSI42RdEnJ88jgpzmupgTD70e1I5LpXtBD0sdnUiN57CFGStRnJavdqCuUUeRJdlajykDuR8i5V498PwydSsvfTWSSGdIKNCGoUal-tdKHZA5-CEdnYmW5vkedfsIbxYadflNhlSjeOKqvBPIcQN0Vjw3nc4mJ-5yNXsdcWf-wltFaHaFEGd4hmjg1yw8uZMHsk-UK0j7Kfr84C3YKDCvZ677DMSJrNCxfdalJ0BhRg-Uw" style="image-rendering: crisp-edges;"/>
+<img alt="MBC Logo" class="logo-img h-[48px] md:h-[72px] w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC14B3xIz8ArLGBVrdBDpTKJSI42RdEnJ88jgpzmupgTD70e1I5LpXtBD0sdnUiN57CFGStRnJavdqCuUUeRJdlajykDuR8i5V498PwydSsvfTWSSGdIKNCGoUal-tdKHZA5-CEdnYmW5vkedfsIbxYadflNhlSjeOKqvBPIcQN0Vjw3nc4mJ-5yNXsdcWf-wltFaHaFEGd4hmjg1yw8uZMHsk-UK0j7Kfr84C3YKDCvZ677DMSJrNCxfdalJ0BhRg-Uw" style="image-rendering: crisp-edges;" fetchpriority="high" decoding="async"/>
 </a>
 </div>
 <!-- Tier 2: Brand Name -->
@@ -338,7 +370,7 @@
 <!-- Hero Section -->
 <section class="relative h-[85vh] md:h-[90vh] w-full flex items-center justify-center overflow-hidden bg-canvas">
 <div class="absolute inset-0 z-0">
-<img alt="hero automotive shot" class="w-full h-full object-cover hero-image" data-alt="A cinematic low-angle long exposure shot of a sleek, dark metallic Italian supercar speeding through a neon-lit urban tunnel at midnight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAokRTo7TgfacG_AYIAPiNWxmVK-SXB6tNU4DlMUCldiudlC4ubHILcioBYj4cJTyqkckxspkL5tAFLfmeYCYEQTMylsz4j-dB8ZM_2-qCOklnbEJGchxEbFb_c7bqm4mJf5Vu3tHM-w-NAa6zSLM7Met5--JnqKpqQNalE0eidRX__zYMnEGqAAHTLoPi801jyBCxcIFloLkkC9C2uE6q4G53mxv-xmxMjClalukGpbX6jQi76OWbt611pBEZ9EiR2SmqMf6FkEz3g"/>
+<img alt="hero automotive shot" class="w-full h-full object-cover hero-image" data-alt="A cinematic low-angle long exposure shot of a sleek, dark metallic Italian supercar speeding through a neon-lit urban tunnel at midnight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAokRTo7TgfacG_AYIAPiNWxmVK-SXB6tNU4DlMUCldiudlC4ubHILcioBYj4cJTyqkckxspkL5tAFLfmeYCYEQTMylsz4j-dB8ZM_2-qCOklnbEJGchxEbFb_c7bqm4mJf5Vu3tHM-w-NAa6zSLM7Met5--JnqKpqQNalE0eidRX__zYMnEGqAAHTLoPi801jyBCxcIFloLkkC9C2uE6q4G53mxv-xmxMjClalukGpbX6jQi76OWbt611pBEZ9EiR2SmqMf6FkEz3g" fetchpriority="high" decoding="async"/>
 <div class="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent"></div>
 </div>
 <div class="relative z-10 text-center px-md max-w-4xl">
@@ -356,6 +388,13 @@
 </div>
 </section>
 <!-- Structured Grid Section -->
+<!-- The five tiles below are skeleton placeholders. On load, the JS at the
+     bottom of this page fetches /portfolio/, reads the first five project
+     cards, and swaps them in — so this section always mirrors the top of
+     the portfolio page without needing to be edited by hand.
+     Layout: 3 tiles on the first row, 2 centered on the second (lg:grid-cols-6,
+     each tile spans 2; the 4th tile starts at column 2 to center the pair).
+     If the fetch fails, the fallback markup in the JS restores static tiles. -->
 <section class="bg-canvas py-xl md:py-xxl">
 <div class="max-w-max-content-width mx-auto px-md">
 <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-xl gap-sm">
@@ -366,50 +405,55 @@
 <div class="h-px flex-1 bg-hairline mx-lg hidden lg:block reveal-up"></div>
 <p class="font-body-md text-secondary reveal-up max-w-xs">A selection of recent works focusing on mechanical precision.</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-xl gap-x-6 md:gap-x-md">
-<!-- Project 1 -->
-<div class="group border-t border-hairline pt-md reveal-up">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
-<div class="absolute inset-0 flex items-center justify-center opacity-20">
-<span class="material-symbols-outlined text-6xl">photo_camera</span>
-</div>
-</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-y-xl gap-x-6 md:gap-x-md" id="latest-grid">
+<!-- Skeleton 1 -->
+<div class="latest-skeleton group border-t border-hairline pt-md lg:col-span-2">
+<div class="skeleton-shimmer bg-canvas-elevated aspect-[4/5] mb-sm"></div>
 <div class="flex justify-between items-start">
-<div>
-<span class="font-caption-upper text-[10px] text-secondary">01 / ARCHIVE</span>
-<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">PROJECT PHOENIX</h3>
-</div>
-<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+<div class="w-full">
+<div class="skeleton-bar skeleton-shimmer h-[10px] w-20 mb-2"></div>
+<div class="skeleton-bar skeleton-shimmer h-[16px] w-3/4"></div>
 </div>
 </div>
-<!-- Project 2 -->
-<div class="group border-t border-hairline pt-md reveal-up" style="transition-delay: 100ms;">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
-<div class="absolute inset-0 flex items-center justify-center opacity-20">
-<span class="material-symbols-outlined text-6xl">videocam</span>
 </div>
-</div>
+<!-- Skeleton 2 -->
+<div class="latest-skeleton group border-t border-hairline pt-md lg:col-span-2">
+<div class="skeleton-shimmer bg-canvas-elevated aspect-[4/5] mb-sm"></div>
 <div class="flex justify-between items-start">
-<div>
-<span class="font-caption-upper text-[10px] text-secondary">02 / ARCHIVE</span>
-<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">NEON VELOCITY</h3>
-</div>
-<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+<div class="w-full">
+<div class="skeleton-bar skeleton-shimmer h-[10px] w-20 mb-2"></div>
+<div class="skeleton-bar skeleton-shimmer h-[16px] w-3/4"></div>
 </div>
 </div>
-<!-- Project 3 -->
-<div class="group border-t border-hairline pt-md reveal-up sm:col-span-2 lg:col-span-1" style="transition-delay: 200ms;">
-<div class="image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative">
-<div class="absolute inset-0 flex items-center justify-center opacity-20">
-<span class="material-symbols-outlined text-6xl">speed</span>
 </div>
-</div>
+<!-- Skeleton 3 -->
+<div class="latest-skeleton group border-t border-hairline pt-md lg:col-span-2 sm:col-span-2 lg:col-start-auto">
+<div class="skeleton-shimmer bg-canvas-elevated aspect-[4/5] mb-sm"></div>
 <div class="flex justify-between items-start">
-<div>
-<span class="font-caption-upper text-[10px] text-secondary">03 / ARCHIVE</span>
-<h3 class="font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors">AERODYNAMICA</h3>
+<div class="w-full">
+<div class="skeleton-bar skeleton-shimmer h-[10px] w-20 mb-2"></div>
+<div class="skeleton-bar skeleton-shimmer h-[16px] w-3/4"></div>
 </div>
-<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+</div>
+</div>
+<!-- Skeleton 4 (starts the centered second row on desktop) -->
+<div class="latest-skeleton group border-t border-hairline pt-md lg:col-span-2 lg:col-start-2">
+<div class="skeleton-shimmer bg-canvas-elevated aspect-[4/5] mb-sm"></div>
+<div class="flex justify-between items-start">
+<div class="w-full">
+<div class="skeleton-bar skeleton-shimmer h-[10px] w-20 mb-2"></div>
+<div class="skeleton-bar skeleton-shimmer h-[16px] w-3/4"></div>
+</div>
+</div>
+</div>
+<!-- Skeleton 5 -->
+<div class="latest-skeleton group border-t border-hairline pt-md lg:col-span-2">
+<div class="skeleton-shimmer bg-canvas-elevated aspect-[4/5] mb-sm"></div>
+<div class="flex justify-between items-start">
+<div class="w-full">
+<div class="skeleton-bar skeleton-shimmer h-[10px] w-20 mb-2"></div>
+<div class="skeleton-bar skeleton-shimmer h-[16px] w-3/4"></div>
+</div>
 </div>
 </div>
 </div>
@@ -517,5 +561,153 @@
         window.addEventListener('resize', () => {
             updateNav();
         });
+
+        /* ---------------------------------------------------------------
+           Latest Series feed
+           Pulls the first five project cards from /portfolio/ and renders
+           them here in this page's own card style (so the portfolio page's
+           varied column spans don't leak into this grid). Same-origin, so
+           no CORS setup is needed on a static host.
+           --------------------------------------------------------------- */
+        const LATEST_COUNT = 5;
+        const latestGrid = document.getElementById('latest-grid');
+
+        // Desktop layout: 3 across, then 2 centered. With a 6-column grid,
+        // each tile spans 2; the 4th tile starts at column 2 so the final
+        // pair sits centered under the first row.
+        function columnClassesFor(index) {
+            let classes = 'lg:col-span-2';
+            if (index === 3) classes += ' lg:col-start-2';
+            // A lone final tile on the small (2-col) breakpoint spans both
+            // columns rather than leaving a ragged half-width gap.
+            if (index === LATEST_COUNT - 1 && LATEST_COUNT % 2 !== 0) {
+                classes += ' sm:col-span-2 lg:col-span-2';
+            }
+            return classes;
+        }
+
+        function buildCard(project, index) {
+            const card = document.createElement('div');
+            card.className = 'group border-t border-hairline pt-md reveal-up ' + columnClassesFor(index);
+            card.style.transitionDelay = (index * 100) + 'ms';
+
+            const number = String(index + 1).padStart(2, '0');
+            const link = document.createElement('a');
+            link.href = '/portfolio/';
+            link.className = 'block';
+
+            const imageWrap = document.createElement('div');
+            imageWrap.className = 'image-zoom-container bg-canvas-elevated aspect-[4/5] mb-sm relative';
+
+            if (project.src) {
+                const img = document.createElement('img');
+                img.src = project.src;
+                img.alt = project.alt || project.title || '';
+                img.className = 'w-full h-full object-cover';
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                imageWrap.appendChild(img);
+            } else {
+                // Project has no photo yet — keep the original icon placeholder
+                // look rather than an empty box.
+                const iconWrap = document.createElement('div');
+                iconWrap.className = 'absolute inset-0 flex items-center justify-center opacity-20';
+                iconWrap.innerHTML = '<span class="material-symbols-outlined text-6xl">photo_camera</span>';
+                imageWrap.appendChild(iconWrap);
+            }
+
+            const meta = document.createElement('div');
+            meta.className = 'flex justify-between items-start';
+            const metaText = document.createElement('div');
+
+            const label = document.createElement('span');
+            label.className = 'font-caption-upper text-[10px] text-secondary uppercase';
+            label.textContent = number + ' / ' + (project.caption || 'ARCHIVE');
+
+            const title = document.createElement('h3');
+            title.className = 'font-title-md text-title-md text-on-surface group-hover:text-rosso-corsa transition-colors uppercase';
+            title.textContent = project.title || '';
+
+            metaText.appendChild(label);
+            metaText.appendChild(title);
+
+            const arrow = document.createElement('span');
+            arrow.className = 'material-symbols-outlined text-secondary group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform';
+            arrow.textContent = 'arrow_outward';
+
+            meta.appendChild(metaText);
+            meta.appendChild(arrow);
+
+            link.appendChild(imageWrap);
+            link.appendChild(meta);
+            card.appendChild(link);
+            return card;
+        }
+
+        function revealCards(cards) {
+            // Stagger each tile in. requestAnimationFrame lets the browser
+            // paint them in their pre-transition state first, otherwise the
+            // class lands in the same frame and the animation never runs.
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    cards.forEach(card => card.classList.add('active'));
+                });
+            });
+        }
+
+        function renderFallback() {
+            // Fetch failed (offline, portfolio page moved, etc.) — restore
+            // static tiles so the section degrades gracefully instead of
+            // showing an empty gap or a stuck shimmer.
+            const fallback = [
+                { title: 'PROJECT PHOENIX', caption: 'ARCHIVE' },
+                { title: 'NEON VELOCITY', caption: 'ARCHIVE' },
+                { title: 'AERODYNAMICA', caption: 'ARCHIVE' }
+            ];
+            latestGrid.innerHTML = '';
+            const cards = fallback.map((p, i) => buildCard(p, i));
+            cards.forEach(c => latestGrid.appendChild(c));
+            revealCards(cards);
+        }
+
+        function loadLatest() {
+            if (!latestGrid) return;
+
+            fetch('/portfolio/', { credentials: 'same-origin' })
+                .then(res => {
+                    if (!res.ok) throw new Error('Portfolio fetch failed: ' + res.status);
+                    return res.text();
+                })
+                .then(html => {
+                    const doc = new DOMParser().parseFromString(html, 'text/html');
+                    const cards = Array.from(doc.querySelectorAll('.portfolio-card')).slice(0, LATEST_COUNT);
+                    if (!cards.length) throw new Error('No portfolio cards found');
+
+                    const projects = cards.map(card => {
+                        // The cover photo is the first .carousel-slide that
+                        // actually has a src — later slides are lightbox-only,
+                        // and some tiles have no photo filled in yet.
+                        const cover = Array.from(card.querySelectorAll('.carousel-slide'))
+                            .find(img => img.getAttribute('src'));
+                        return {
+                            title: card.dataset.title || '',
+                            caption: card.dataset.caption || '',
+                            src: cover ? cover.getAttribute('src') : '',
+                            alt: cover ? cover.getAttribute('alt') : ''
+                        };
+                    });
+
+                    latestGrid.innerHTML = '';
+                    const built = projects.map((p, i) => buildCard(p, i));
+                    built.forEach(c => latestGrid.appendChild(c));
+                    revealCards(built);
+                })
+                .catch(err => {
+                    console.warn('Latest Series feed unavailable:', err);
+                    renderFallback();
+                });
+        }
+
+        loadLatest();
     </script>
 </body></html>
