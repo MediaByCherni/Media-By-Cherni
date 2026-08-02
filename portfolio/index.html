@@ -302,7 +302,6 @@
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 pb-1 transition-all text-rosso-corsa border-rosso-corsa" data-category="all">ALL</button>
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="portrait">PORTRAIT</button>
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="automotive">AUTOMOTIVE</button>
-<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="real-estate">REAL ESTATE</button>
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="landscape">LANDSCAPE</button>
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="graduation">GRADUATION</button>
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="video">VIDEO</button>
@@ -317,16 +316,18 @@
      show a "No photo added yet" placeholder in the lightbox.
 
      data-category must match one of the filter tabs above:
-     portrait | automotive | real-estate | landscape | graduation | video
+     portrait | automotive | landscape | graduation | video
 
-     PERFORMANCE: every slide carries loading="lazy", so hidden slides
-     (display:none) aren't downloaded until the lightbox needs them. -->
+     PERFORMANCE: cover slides use loading="eager" with explicit width/height
+     so they render reliably on mobile (a lazy image in a zero-height
+     container can fail to trigger). Hidden slides stay loading="lazy", so
+     they aren't downloaded until the lightbox needs them. -->
 <section class="max-w-max-content-width mx-auto px-xs md:px-md py-xxl">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg" id="portfolio-grid">
 <!-- HORIZONTAL BLOCK --><!-- Project 1 -->
 <div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" width="1600" height="900" loading="eager" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
@@ -346,7 +347,7 @@
 <!-- VERTICAL BLOCK --><!-- Project 2 -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portrait" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" width="1200" height="1600" loading="eager" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
@@ -366,7 +367,7 @@
 <!-- VERTICAL BLOCK --><!-- Project 3 -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="graduation" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" width="1200" height="1600" loading="eager" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
@@ -386,7 +387,7 @@
 <!-- HORIZONTAL BLOCK --><!-- Project 4 -->
 <div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="landscape" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" width="1600" height="900" loading="eager" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
@@ -404,9 +405,9 @@
 </div>
 </div>
 <!-- HORIZONTAL BLOCK --><!-- Project 5 -->
-<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="real-estate" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
+<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" width="1600" height="900" loading="eager" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
@@ -426,7 +427,7 @@
 <!-- VERTICAL BLOCK --><!-- Project 6 -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="video" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" width="1200" height="1600" loading="eager" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
