@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Portfolio</title><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link rel="preconnect" href="https://i.postimg.cc"/><link rel="dns-prefetch" href="https://i.postimg.cc"/><title>Portfolio</title><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -253,7 +253,7 @@
 <!-- Tier 1: Logo -->
 <div class="logo-wrapper flex justify-center shrink-0">
 <a class="block" href="/">
-<img alt="mbc-logo-white" class="logo-img h-[48px] md:h-[72px] w-auto" src="https://i.postimg.cc/HcL6SzCG/mbc-logo-white.png"/>
+<img alt="mbc-logo-white" class="logo-img h-[48px] md:h-[72px] w-auto" src="https://i.postimg.cc/HcL6SzCG/mbc-logo-white.png" fetchpriority="high" decoding="async"/>
 </a>
 </div>
 <!-- Tier 2: Brand Name -->
@@ -281,7 +281,7 @@
 <section class="relative w-full h-[850px] flex items-end overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-<img class="w-full h-full object-cover" src="https://i.postimg.cc/RMcH4M07/fords-landing-cherry-blossoms-alexandria-va-9.jpg" alt="fords-landing-cherry-blossoms-alexandria-va-9"/>
+<img class="w-full h-full object-cover" src="https://i.postimg.cc/RMcH4M07/fords-landing-cherry-blossoms-alexandria-va-9.jpg" alt="fords-landing-cherry-blossoms-alexandria-va-9" fetchpriority="high" decoding="async"/>
 </div>
 <div class="relative z-10 max-w-max-content-width mx-auto w-full px-xs md:px-md pb-xl">
 <div class="max-w-2xl">
@@ -315,16 +315,21 @@
      ever appear in that project's lightbox. To add a photo, just fill in
      the matching <img>'s src (and alt) — no other markup to change. The
      cover <img> has no forced aspect-ratio/cropping, so the tile's height
-     follows that photo's natural proportions once its src is set. -->
+     follows that photo's natural proportions once its src is set.
+
+     PERFORMANCE: every carousel slide carries loading="lazy" so the browser
+     defers fetching it. Hidden slides (display:none) are never near the
+     viewport, so they aren't downloaded at all until the lightbox needs
+     them — previously all 3-4 slides per tile downloaded on page load. -->
 <section class="max-w-max-content-width mx-auto px-xs md:px-md py-xxl">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg" id="portfolio-grid">
 <!-- Project 1: Automotive -->
 <div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="Robert White Pride" data-caption="Campaign / Volunteer">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/xQgwrVLt/DSC02929-3.jpg" alt="DSC02929-3"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/Vm4rn6tW/DSC03813.jpg" alt="DSC03813"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
-<img class="carousel-slide hidden" alt="Photo 4"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/xQgwrVLt/DSC02929-3.jpg" alt="DSC02929-3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" src="https://i.postimg.cc/Vm4rn6tW/DSC03813.jpg" alt="DSC03813" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
@@ -338,10 +343,10 @@
 <!-- Project 2: Automotive -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="HARRIS / WALZ" data-caption="CAMPAIGN / MEDIA">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/mZkYFHrv/IMG-0991-4.jpg" alt="IMG-0991-4"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/9X0dq7fS/IMG-0996-5.jpg" alt="IMG-0996-5"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/6t1Hz9J0/IMG-0327-4.jpg" alt="IMG-0327-4"/>
-<img class="carousel-slide hidden" alt="Photo 4"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/mZkYFHrv/IMG-0991-4.jpg" alt="IMG-0991-4" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" src="https://i.postimg.cc/9X0dq7fS/IMG-0996-5.jpg" alt="IMG-0996-5" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" src="https://i.postimg.cc/6t1Hz9J0/IMG-0327-4.jpg" alt="IMG-0327-4" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -354,9 +359,9 @@
 <!-- Project 3: Automotive -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="SYMMETRY OPS" data-caption="STUDIO / COMMERCIAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -369,9 +374,9 @@
 <!-- Project 4: Portraits -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="THE DRIVER'S SOUL" data-caption="HUMAN INTEREST / DOCU">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -384,9 +389,9 @@
 <!-- Project 5: Portraits -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="URBAN PULSE" data-caption="STREET / EDITORIAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
@@ -400,9 +405,9 @@
 <!-- Project 6: Landscape -->
 <div class="md:col-span-12 group portfolio-card gallery-item cursor-pointer mt-md" data-category="landscape" data-title="PEAK PERFORMANCE" data-caption="ADVERTISING / LANDSCAPE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -415,9 +420,9 @@
 <!-- Project 7: Landscape -->
 <div class="md:col-span-6 group portfolio-card gallery-item cursor-pointer" data-category="landscape" data-title="GOLDEN HOUR" data-caption="TRAVEL / LANDSCAPE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -430,10 +435,10 @@
 <!-- Project 8: Nature -->
 <div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="Robert White Pride" data-caption="Campaign / Volunteer">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/xQgwrVLt/DSC02929-3.jpg" alt="DSC02929-3"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/Vm4rn6tW/DSC03813.jpg" alt="DSC03813"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
-<img class="carousel-slide hidden" alt="Photo 4"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/xQgwrVLt/DSC02929-3.jpg" alt="DSC02929-3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" src="https://i.postimg.cc/Vm4rn6tW/DSC03813.jpg" alt="DSC03813" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
@@ -447,9 +452,9 @@
 <!-- Project 9: Nature -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="VERTICAL LIMIT" data-caption="ADVENTURE / VERTICAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -462,9 +467,9 @@
 <!-- Project 10: Nature -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="SILENT PEAK" data-caption="NATURE / MINIMAL">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -477,9 +482,9 @@
 <!-- Project 11: Portraits -->
 <div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="QUIET FRAME" data-caption="MINIMAL / PORTRAIT">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1"/>
-<img class="carousel-slide hidden" alt="Photo 2"/>
-<img class="carousel-slide hidden" alt="Photo 3"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 </div>
 <div class="flex justify-between items-baseline border-b border-hairline pb-xs">
 <div>
@@ -672,6 +677,21 @@
             return Array.from(item.querySelectorAll('.carousel-slide'));
         }
 
+        // Slides are lazy-loaded, so a hidden slide hasn't been fetched when
+        // the page loads. Warming a project's slides on hover/touch means the
+        // images are usually already in cache by the time the lightbox opens,
+        // without costing anything on initial page load.
+        function preloadSlides(item) {
+            getSlidesForItem(item).forEach(slide => {
+                const src = slide.getAttribute('src');
+                if (src && !slide.dataset.preloaded) {
+                    const warm = new Image();
+                    warm.src = src;
+                    slide.dataset.preloaded = 'true';
+                }
+            });
+        }
+
         function renderLightbox() {
             const slide = currentSlides[lightboxIndex];
             if (!slide) return;
@@ -726,6 +746,8 @@
 
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', () => openLightbox(item));
+            item.addEventListener('mouseenter', () => preloadSlides(item));
+            item.addEventListener('touchstart', () => preloadSlides(item), { passive: true });
         });
 
         lightboxClose.addEventListener('click', closeLightbox);
