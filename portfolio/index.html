@@ -300,198 +300,147 @@
 <div class="max-w-max-content-width mx-auto px-xs md:px-md flex flex-wrap justify-between items-center gap-md">
 <div class="flex gap-md overflow-x-auto pb-2 md:pb-0 scrollbar-hide" id="portfolio-tabs">
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 pb-1 transition-all text-rosso-corsa border-rosso-corsa" data-category="all">ALL</button>
-<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="portraits">PORTRAITS</button>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="portrait">PORTRAIT</button>
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="automotive">AUTOMOTIVE</button>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="real-estate">REAL ESTATE</button>
 <button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="landscape">LANDSCAPE</button>
-<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="nature">NATURE</button>
-</div>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="graduation">GRADUATION</button>
+<button class="tab-btn whitespace-nowrap font-caption-upper text-caption-upper border-b-2 border-transparent pb-1 transition-all text-secondary hover:text-on-surface" data-category="video">VIDEO</button>
 </div>
 </div>
 </section>
 <!-- Portfolio Grid -->
-<!-- Each tile is a project with its own 3-image carousel: three <img> tags
-     with class="carousel-slide", each with an empty src="" for now. Slide 1
-     (no "hidden" class) is the grid cover; slides 2-3 (class="hidden") only
-     ever appear in that project's lightbox. To add a photo, just fill in
-     the matching <img>'s src (and alt) — no other markup to change. The
-     cover <img> has no forced aspect-ratio/cropping, so the tile's height
-     follows that photo's natural proportions once its src is set.
+<!-- Each tile is a project with its own 4-image carousel. Slide 1 (no
+     "hidden" class) is the grid cover; slides 2-4 (class="hidden") only
+     appear in that project's lightbox. To add a photo, fill in the matching
+     <img>'s src and alt — no other markup to change. Slides with no src
+     show a "No photo added yet" placeholder in the lightbox.
 
-     PERFORMANCE: every carousel slide carries loading="lazy" so the browser
-     defers fetching it. Hidden slides (display:none) are never near the
-     viewport, so they aren't downloaded at all until the lightbox needs
-     them — previously all 3-4 slides per tile downloaded on page load. -->
+     data-category must match one of the filter tabs above:
+     portrait | automotive | real-estate | landscape | graduation | video
+
+     PERFORMANCE: every slide carries loading="lazy", so hidden slides
+     (display:none) aren't downloaded until the lightbox needs them. -->
 <section class="max-w-max-content-width mx-auto px-xs md:px-md py-xxl">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg" id="portfolio-grid">
-<!-- Project 1: Automotive -->
-<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="Robert White Pride" data-caption="Campaign / Volunteer">
+<!-- HORIZONTAL BLOCK --><!-- Project 1 -->
+<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/xQgwrVLt/DSC02929-3.jpg" alt="DSC02929-3" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/Vm4rn6tW/DSC03813.jpg" alt="DSC03813" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs gap-md">
 <div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">Robert White Pride</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">Campaign / Volunteer</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PROJECT TITLE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">CAPTION / SUBTITLE</p>
 </div>
+<div class="flex flex-col items-end shrink-0">
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2026</span>
+<span class="font-caption-upper text-caption-upper text-secondary uppercase mt-1">CITY, STATE</span>
 </div>
 </div>
-<!-- Project 2: Automotive -->
-<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="HARRIS / WALZ" data-caption="CAMPAIGN / MEDIA">
+</div>
+<!-- VERTICAL BLOCK --><!-- Project 2 -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portrait" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/mZkYFHrv/IMG-0991-4.jpg" alt="IMG-0991-4" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/9X0dq7fS/IMG-0996-5.jpg" alt="IMG-0996-5" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/6t1Hz9J0/IMG-0327-4.jpg" alt="IMG-0327-4" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
-</div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">HARRIS / WALZ</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">CAMPAIGN / MEDIA</p>
-</div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">AUG 2024</span>
-</div>
-</div>
-<!-- Project 3: Automotive -->
-<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="automotive" data-title="SYMMETRY OPS" data-caption="STUDIO / COMMERCIAL">
-<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
-</div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">SYMMETRY OPS</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">STUDIO / COMMERCIAL</p>
-</div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
-</div>
-</div>
-<!-- Project 4: Portraits -->
-<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="THE DRIVER'S SOUL" data-caption="HUMAN INTEREST / DOCU">
-<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
-</div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">THE DRIVER'S SOUL</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">HUMAN INTEREST / DOCU</p>
-</div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
-</div>
-</div>
-<!-- Project 5: Portraits -->
-<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="URBAN PULSE" data-caption="STREET / EDITORIAL">
-<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
-<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-</div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">URBAN PULSE</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">STREET / EDITORIAL</p>
-</div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
-</div>
-</div>
-<!-- Project 6: Landscape -->
-<div class="md:col-span-12 group portfolio-card gallery-item cursor-pointer mt-md" data-category="landscape" data-title="PEAK PERFORMANCE" data-caption="ADVERTISING / LANDSCAPE">
-<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
-</div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PEAK PERFORMANCE</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">ADVERTISING / LANDSCAPE</p>
-</div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
-</div>
-</div>
-<!-- Project 7: Landscape -->
-<div class="md:col-span-6 group portfolio-card gallery-item cursor-pointer" data-category="landscape" data-title="GOLDEN HOUR" data-caption="TRAVEL / LANDSCAPE">
-<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
-</div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">GOLDEN HOUR</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">TRAVEL / LANDSCAPE</p>
-</div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
-</div>
-</div>
-<!-- Project 8: Nature -->
-<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="Robert White Pride" data-caption="Campaign / Volunteer">
-<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/xQgwrVLt/DSC02929-3.jpg" alt="DSC02929-3" loading="lazy" decoding="async"/>
-<img class="carousel-slide hidden" src="https://i.postimg.cc/Vm4rn6tW/DSC03813.jpg" alt="DSC03813" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
 <div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs gap-md">
 <div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">Robert White Pride</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">Campaign / Volunteer</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PROJECT TITLE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">CAPTION / SUBTITLE</p>
 </div>
+<div class="flex flex-col items-end shrink-0">
 <span class="font-caption-upper text-caption-upper text-rosso-corsa">2026</span>
+<span class="font-caption-upper text-caption-upper text-secondary uppercase mt-1">CITY, STATE</span>
 </div>
 </div>
-<!-- Project 9: Nature -->
-<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="VERTICAL LIMIT" data-caption="ADVENTURE / VERTICAL">
+</div>
+<!-- VERTICAL BLOCK --><!-- Project 3 -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="graduation" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
+<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs gap-md">
 <div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">VERTICAL LIMIT</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">ADVENTURE / VERTICAL</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PROJECT TITLE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">CAPTION / SUBTITLE</p>
 </div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2023</span>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2026</span>
+<span class="font-caption-upper text-caption-upper text-secondary uppercase mt-1">CITY, STATE</span>
 </div>
 </div>
-<!-- Project 10: Nature -->
-<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="nature" data-title="SILENT PEAK" data-caption="NATURE / MINIMAL">
+</div>
+<!-- HORIZONTAL BLOCK --><!-- Project 4 -->
+<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="landscape" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
+<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs gap-md">
 <div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">SILENT PEAK</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">NATURE / MINIMAL</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PROJECT TITLE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">CAPTION / SUBTITLE</p>
 </div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2026</span>
+<span class="font-caption-upper text-caption-upper text-secondary uppercase mt-1">CITY, STATE</span>
 </div>
 </div>
-<!-- Project 11: Portraits -->
-<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="portraits" data-title="QUIET FRAME" data-caption="MINIMAL / PORTRAIT">
+</div>
+<!-- HORIZONTAL BLOCK --><!-- Project 5 -->
+<div class="md:col-span-8 group portfolio-card gallery-item cursor-pointer" data-category="real-estate" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
 <div class="overflow-hidden bg-canvas-elevated mb-sm relative">
-<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/GLWg6Kn7/Spongeman-horizontal.webp" alt="Photo 1" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
 <img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
+<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 </div>
-<div class="flex justify-between items-baseline border-b border-hairline pb-xs">
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs gap-md">
 <div>
-<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">QUIET FRAME</h3>
-<p class="font-caption-upper text-caption-upper text-secondary uppercase">MINIMAL / PORTRAIT</p>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PROJECT TITLE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">CAPTION / SUBTITLE</p>
 </div>
-<span class="font-caption-upper text-caption-upper text-rosso-corsa">2024</span>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2026</span>
+<span class="font-caption-upper text-caption-upper text-secondary uppercase mt-1">CITY, STATE</span>
+</div>
+</div>
+</div>
+<!-- VERTICAL BLOCK --><!-- Project 6 -->
+<div class="md:col-span-4 group portfolio-card gallery-item cursor-pointer" data-category="video" data-title="PROJECT TITLE" data-caption="CAPTION / SUBTITLE">
+<div class="overflow-hidden bg-canvas-elevated mb-sm relative">
+<img class="carousel-slide w-full h-auto block transition-transform duration-1000 group-hover:scale-105" src="https://i.postimg.cc/HYqvFz1S/Sponge-vertical.jpg" alt="Photo 1" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 2" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 3" loading="lazy" decoding="async"/>
+<img class="carousel-slide hidden" alt="Photo 4" loading="lazy" decoding="async"/>
+<div class="absolute inset-0 bg-rosso-corsa/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+<div class="flex justify-between items-baseline border-b border-hairline pb-xs gap-md">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1 uppercase">PROJECT TITLE</h3>
+<p class="font-caption-upper text-caption-upper text-secondary uppercase">CAPTION / SUBTITLE</p>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-caption-upper text-caption-upper text-rosso-corsa">2026</span>
+<span class="font-caption-upper text-caption-upper text-secondary uppercase mt-1">CITY, STATE</span>
+</div>
 </div>
 </div>
 </div>
